@@ -4,5 +4,5 @@ set :deploy_env, 'production'
 set :db_env, 'production'
 set :use_sudo, false
 
-role :app, '54.234.237.46'
-role :db, '54.234.237.46', :primary => true
+role :app, '23.23.180.253'
+role :db, '23.23.180.253', :primary => true
