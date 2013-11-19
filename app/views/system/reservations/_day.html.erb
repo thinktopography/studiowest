@@ -1,0 +1,62 @@
+<% height = 6 %>
+<% hourheight = (height * 4) + 3 %>
+<div class="schedule-body" data-date="<%= @date.strftime("%Y-%m-%d") %>" data-url="<%= day_reservations_url(:date => params[:date], :resource_id => params[:resource_id]) %>">
+  <div class="title">
+    <input id="<%= params[:id] %>" type="text" class="datepicker" value="<%= @date.strftime("%Y-%m-%d") %>"/>
+		<strong><%= @date.strftime("%A, %B %d").upcase %></strong>
+    <div class="pager">
+      <%= link_to 'PREV DAY', day_reservations_url(:date => @prev), :class => 'previous' %>
+      <%= link_to 'TODAY', day_reservations_url(:date => Date.today.strftime("%Y-%m-%d")), :class => 'today' %>
+      <%= link_to 'NEXT DAY', day_reservations_url(:date => @next), :class => 'next' %>
+    </div>
+  </div>
+  <div class="column" style="width:64px">
+    <div class="column-header"></div>
+  </div>
+  <% i = 0 %>
+  <% @resources.each do |resource| %>
+	  <div class="column <%= (i < 6) ? 'right' : 'left' %>" style="width:58px" data-resource="<%= resource.id %>">
+	    <div class="column-header">
+	      <%= raw(resource.short_name.upcase.gsub(/ /, "<br />")) %>
+	    </div>
+		</div>
+	<% end %>
+	<div class="schedule-grid schedule-day">
+    <% if @date == Date.today %>
+		  <% hour = Time.now.strftime("%H").to_i - 7 %>
+		  <% min = Time.now.strftime("%M").to_i / 15 %>
+      <div class="now" style="top:<%= (hour * 4 + min) * 7 + 30 %>px;width:696px;left:65px;"></div>
+		<% end %>
+	  <div class="column" style="width:64px">
+	    <% (7..22).each do |hour| %>
+	      <div class="hour" style="height:<%= hourheight %>px">
+	        <%= (hour > 12) ? hour - 12 : hour %><%= (hour > 11) ? 'PM' : 'AM' %>
+	      </div>
+	    <% end %>
+	  </div>
+	  <% i = 0 %>
+	  <% @resources.each do |resource| %>
+	    <div class="column <%= (i < 6) ? 'right' : 'left' %>" style="width:58px" data-resource="<%= resource.id %>">
+	      <div class="column-body">
+	      	<% weekend = (@date.wday == 0 || @date.wday == 6)%>
+	      	<%= render 'grid', :height => height, :weekend => weekend %>
+	        <% unless @reservations[resource.id].nil? %>
+	          <% @reservations[resource.id].each do |j,reservation| %>
+	            <% itemheight = (height + 1) * reservation.length_in_units - 1 %>
+	            <% top = (height * (j - 1)) + j - 1 %>
+	            <%= render 'reservation', :reservation => reservation, :itemheight => itemheight, :top => top %>
+	          <% end %>
+	        <% end %>
+	      </div>
+	    </div>
+	    <% i += 1 %>
+	  <% end %>
+    <% unless @events.nil? %>
+      <% @events.each do |j,event| %>
+        <% itemheight = (height + 1) * event.length_in_units - 1 %>
+        <% top = (height * (j - 1)) + j + 29 %>
+        <%= render 'event', :reservation => event, :itemheight => itemheight, :top => top %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

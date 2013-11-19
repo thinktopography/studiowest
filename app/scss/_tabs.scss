@@ -1,0 +1,8 @@
+div.tabs {
+  overflow: hidden; clear: both; 
+  &.selected { background: #F3F1E9; color: #31363E; }
+  ul { overflow: hidden; padding: 0; margin: 0 0 0 10px; float: left; }
+  li { float: left; padding: 0; margin: 0 3px 0 0; list-style: none; }
+  li a { display: block; background-color: #8c2b0e; padding: 5px 8px; color: #FFF; text-decoration: none; font-size: 12px; @include rounded(5px, 5px, 0, 0); }
+  li a.selected { background-color: #d94316; color: #FFF; }
+}

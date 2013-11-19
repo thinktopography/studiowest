@@ -1,0 +1,231 @@
+<% content_for :main do -%>
+<div class="first" id="overview">
+  <div class="inner">
+  	<div class="left">
+  		<div class="frame">
+        <%= image_tag "studiowest.jpg", :size => "440x290" %>
+				<h3>Studio West, 516 West MLK</h3>
+  		</div>
+			<h3 class="intro">Coworking is a movement that has gained momentum in urban areas such as San Francisco, Austin, and New York City, and is perfectly suited for the independent professional community in Ithaca, New York.  It is a sustainable, low-impact working solution that gives members access to all of the benefits of an office without the full overhead.</h3>
+  	</div>
+		<div class="right">
+      <div class="frame">
+        <%= image_tag "collaborative.jpg", :size => "200x195" %>
+        <h3>Collaborative Workplace</h3>
+      </div>
+      <div class="frame">
+        <%= image_tag "open.jpg", :size => "200x195" %>
+        <h3>Open Floorplan</h3>
+      </div>
+      <div class="frame">
+        <%= image_tag "privateoffice.jpg", :size => "200x195" %>
+        <h3>Private Office</h3>
+      </div>
+      <div class="frame">
+        <%= image_tag "conference.jpg", :size => "200x195" %>
+        <h3>Conference Room</h3>
+      </div>
+		</div>
+  </div>
+</div>
+
+<div class="second" id="plans">
+  <div class="inner">
+  	<div class="left">
+  		<div class="table">
+        <h2>Coworking Plans</h2>
+	      <table cellpadding="0" cellspacing="0">
+	        <thead>
+	          <tr>
+	            <td>&nbsp;</td>
+	            <td><%= image_tag "quartertime.png", :size => '30x30' %><br /><strong>1/4 Time</strong></td>
+	            <td><%= image_tag "halftime.png", :size => '30x30' %><br /><strong>1/2 Time</strong></td>
+	            <td><%= image_tag "threequarterstime.png", :size => '30x30' %><br /><strong>3/4 Time</strong></td>
+	            <td><%= image_tag "fulltime.png", :size => '30x30' %><br /><strong>Full Time</strong></td>
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <tr class="odd">
+	            <th>Monthly Price</th>
+	            <td><strong>$150</strong></td>
+	            <td><strong>$210</strong></td>
+	            <td><strong>$270</strong></td>
+	            <td><strong>$330</strong></td>
+	          </tr>
+	          <tr class="even">
+	            <th>Coworking Credits</th>
+	            <td>40</td>
+	            <td>80</td>
+	            <td>120</td>
+	            <td>160</td>
+	          </tr>
+	          <tr class="odd">
+	            <th>Average Hours/Week</th>
+	            <td>10</td>
+	            <td>20</td>
+	            <td>30</td>
+	            <td>40</td>
+	          </tr>
+	          <tr class="even">
+	            <th>10% Off SEEN Membership <span class="footnote">*</span></th>
+	            <td class="yes">YES</td>
+	            <td class="yes">YES</td>
+	            <td class="yes">YES</td>
+	            <td class="yes">YES</td>
+	          </tr>
+	          <tr class="odd">
+	            <th>Event Rental</th>
+	            <td class="no">NO</td>
+	            <td class="yes">YES</td>
+	            <td class="yes">YES</td>
+	            <td class="yes">YES</td>
+	          </tr>
+	          <tr class="even">
+	            <th>Signage</th>
+	            <td class="no">NO</td>
+	            <td class="no">NO</td>
+	            <td class="yes">YES</td>
+	            <td class="yes">YES</td>
+	          </tr>
+	          <tr class="odd">
+	            <th>Mailing Address</th>
+	            <td class="no">NO</td>
+	            <td class="no">NO</td>
+	            <td class="no">NO</td>
+	            <td class="yes">YES</td>
+	          </tr>
+	        </tbody>
+					<tfoot>
+						<tr>
+							<td colspan="5">
+								<span class="footnote">*</span> Learn more at <%= link_to 'theseen.org', 'http://theseen.org', :target => "_blank" %><br />
+                <span class="footnote">**</span> <%= link_to 'Discounts available for multiple month payment', pricing_memberships_url %>
+						  </td>
+						</tr>
+					</tfoot>
+	      </table>
+  		</div>
+  	</div>
+		<div class="right">
+			<h2>Flexible Plans</h2>
+			<p>In order to accommodate our members' various needs and working preferences, we offer four distinct coworking plans. These plans are designed around quarter time, half time, three quarters time, and full time usage.  At each level, members receive a set number of coworking credits that can be applied towards reservations as well as other standard benefits. Members who purchase larger blocks of credits are also entitled to additional benefits such as use of our mailing address or window signage.</p>
+		</div>
+  </div>
+</div>
+
+<div class="third" id="credits">
+  <div class="inner">
+  	<div class="left">
+      <h2>Credit System</h2>
+			<p>Coworking credits can be used to reserve one of 10 desks, a private office, or the conference room. Members are encouraged to use their credits in the manner that work best for them - all in one week or distributed evenly throughout the month. Resources are available seven days a week from 7 a.m. to 11 p.m. and are offered on a first come, first served basis. As most coworking takes place during normal business hours, all resources are offered at half price during evening and weekend "off peak" hours.</p>
+  	</div>
+		<div class="right">
+			<div class="table">
+				<h2>Credits / Hour</h2>
+	      <table cellpadding="0" cellspacing="0">
+	        <thead>
+	          <tr>
+	            <td>&nbsp;</td>
+	            <td><strong>Peak Hours</strong><br />M-F, 7AM-6PM</td>
+	            <td><strong>Off-Peak Hours</strong><br />M-F, 6PM-11PM<br />WEEKENDS</td>
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <tr class="odd">
+	            <th>Desk</th>
+	            <td>1.0</td>
+	            <td>0.5</td>
+	          </tr>
+	          <tr class="even">
+	            <th>Private Office</th>
+	            <td>2.0</td>
+	            <td>1.0</td>
+	          </tr>
+	          <tr class="odd">
+	            <th>Conference Room</th>
+	            <td>3.0</td>
+	            <td>1.5</td>
+	          </tr>
+	        </tbody>
+	      </table>
+			</div>
+		</div>
+  </div>
+</div>
+
+<div class="fourth" id="scheduling">
+  <div class="inner">
+    <div class="left">
+    	<%= image_tag "application.png", :size => "460x250" %>
+    </div>
+    <div class="right">
+      <h2>Online Scheduling</h2>
+      <p>Reservations are managed through an intuitive web-based scheduling tool. Members can log in at any time and use their available coworking credits to reserve the resources they need when they need them. With a signed commitment letter, members are given the additional flexibility to schedule resources several weeks to several months ahead of time.</p>
+    </div>
+  </div>
+</div>
+
+<div class="fifth" id="neighborhood">
+  <div class="inner">
+  	<div class="left">
+      <h2>Vibrant Neighborhood</h2>
+      <p>Studio West is located in Ithaca's West End business district.  We are excited to share the block with such great neighbors as
+			<%= link_to 'Gimme! Coffee', "http://www.gimmecoffee.com", :target => '_blank' %>,
+			<%= link_to "Felicia's Atomic Lounge", "http://www.atomicloungeithaca.com", :target => '_blank' %>, 
+      <%= link_to 'Saigon Kitchen', "http://www.saigonkitchenithaca.com", :target => '_blank' %>, and
+      <%= link_to 'The Westy', "https://www.facebook.com/profile.php?id=1663563167", :target => '_blank' %>.
+			The studio is located less than a block away from the nearest <%= link_to 'Ithaca Carshare', "http://www.ithacacarshare.org", :target => '_blank' %> vehicle and just a short walk to The Commons.
+  	</div>
+    <div class="right">
+      <div class="frame">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sixth" id="community">
+  <div class="inner">
+    <div class="left">
+      <div class="frame">
+        <%= image_tag "community.jpg", :size => "440x250" %>
+      </div>
+    </div>
+    <div class="right">
+      <h2>Creative Community</h2>
+      <p>Coworking creates the unique opportunity for you to be part of a creative community of professional peers, many of whom could become collaborators, partners, or colleagues. By coworking at Studio West, we hope you'll find inspiration in sharing your professional time with our professional community.</p>
+    </div>
+  </div>
+</div>
+
+<div class="first" id="signup">
+  <div class="inner">
+    <div class="center">
+      <div class="form">
+        <% form_for @inquiry, { :url => home_path(:anchor => 'signup') } do |f| %>
+          <div class="header">
+            <h2>Let's Get Started!</h2>
+            <p>Ready to cowork? Complete the form below and we'll contact you with membership availability and schedule a time for you to visit the studio and meet us!</p>
+          </div>
+          <div class="body">
+            <dl>
+              <dt><%= f.label :first_name, "First Name" %></dt>
+              <dd><%= f.text_field :first_name %></dd>
+              <dt><%= f.label :last_name, "Last Name" %></dt>
+              <dd><%= f.text_field :last_name %></dd>
+              <dt><%= f.label :email %></dt>
+              <dd><%= f.text_field :email %></dd>
+              <dt><%= f.label :phone %></dt>
+              <dd><%= f.text_field :phone %></dd>
+            </dl>
+          </div>
+          <div class="buttons">
+            <%= f.submit "Send" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% end %>

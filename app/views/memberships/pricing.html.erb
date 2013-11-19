@@ -1,0 +1,59 @@
+<% content_for :main do %>
+
+<div class="first" id="signup">
+  <div class="inner">
+    <div class="center">
+      <div class="form">
+        <div class="header">
+          <h2>Multiple Month Payments</h2>
+					<p>We offer the following discounts for members who pay for multiple months at once:</p>
+        </div>
+        <div class="body">
+         <div class="table">
+          <table cellpadding="0" cellspacing="0">
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <td><%= image_tag "quartertime.png", :size => '30x30' %><br /><strong>1/4 Time</strong></td>
+                <td><%= image_tag "halftime.png", :size => '30x30' %><br /><strong>1/2 Time</strong></td>
+                <td><%= image_tag "threequarterstime.png", :size => '30x30' %><br /><strong>3/4 Time</strong></td>
+                <td><%= image_tag "fulltime.png", :size => '30x30' %><br /><strong>Full Time</strong></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd">
+                <th>One month</th>
+                <% Plan.find(:all).each do |plan| %>
+                  <td>
+                  	<strong><%= number_to_currency(plan.one_month) %></strong><br />
+									</td>
+								<% end %>
+              </tr>
+              <tr class="even">
+                <th>Three months (-$25)</th>
+                <% Plan.find(:all).each do |plan| %>
+                  <td>
+                    <span class="strike"><%= number_to_currency(plan.one_month * 3) %></span><br />
+                    <strong><%= number_to_currency(plan.one_month * 3 - 25.00) %></strong>
+                  </td>
+                <% end %>
+              </tr>
+              <tr class="odd">
+                <th>Six months (-$50)</th>
+                <% Plan.find(:all).each do |plan| %>
+                  <td>
+                    <span class="strike"><%= number_to_currency(plan.one_month * 6) %></span><br />
+                    <strong><%= number_to_currency(plan.one_month * 6 - 50.00) %></strong>
+                  </td>
+                <% end %>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% end %>

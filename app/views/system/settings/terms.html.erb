@@ -1,0 +1,26 @@
+<% content_for :main do %>
+
+  <div class="form">
+
+    <div class="header">
+      <h2>Terms of Usage</h2>
+      <p>Please read through the following document and agree to the terms to start using the reservtion system</p>
+    </div>
+
+    <% form_for @user, :url => terms_settings_url do |f| %>
+    
+      <div class="terms">
+        <%= render 'site/terms' %>
+				<%= hidden_field_tag "user[agreed_to_terms]", 1 %>
+      </div>    
+    
+      <div class="buttons">
+        <%= f.submit "Agree", { :class => "button" } %>
+        
+      </div>
+    
+    <% end %>
+  
+  </div>
+
+<% end %>

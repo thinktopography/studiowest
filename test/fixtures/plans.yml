@@ -1,0 +1,32 @@
+one:
+  id: 1
+  name: Quarter Time
+  credits: 320
+  one_month: 150.00
+  two_months: 425.00
+  three_months: 850.00
+  limit: 12
+two:
+  id: 2
+  name: Half Time
+  credits: 640
+  one_month: 210.00
+  two_months: 605.00
+  three_months: 1210.00
+  limit: 10
+three:
+  id: 3
+  name: Three Quarters Time
+  credits: 960
+  one_month: 270.00
+  two_months: 785.00
+  three_months: 1570.00
+  limit: 7
+four:
+  id: 4
+  name: Full Time
+  credits: 1280
+  one_month: 330.00
+  two_months: 965.00
+  three_months: 1930.00
+  limit: 5

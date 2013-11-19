@@ -1,0 +1,72 @@
+one:
+  id: 1
+  name: Desk 1
+  short_name: Desk 1
+  peak_credits: 1.00
+  off_peak_credits: 0.50
+two:
+  id: 2
+  name: Desk 2
+  short_name: Desk 2
+  peak_credits: 1.00
+  off_peak_credits: 0.50
+three:
+  id: 3
+  name: Desk 3
+  short_name: Desk 3
+  peak_credits: 1.00
+  off_peak_credits: 0.50
+four:
+  id: 4
+  name: Desk 4
+  short_name: Desk 4
+  peak_credits: 1.00
+  off_peak_credits: 0.50
+five:
+  id: 5
+  name: Desk 5
+  short_name: Desk 5
+  peak_credits: 1.00
+  off_peak_credits: 0.50
+six:
+  id: 6
+  name: Desk 6
+  short_name: Desk 6
+  peak_credits: 1.00
+  off_peak_credits: 0.50
+seven:
+  id: 7
+  name: Desk 7
+  short_name: Desk 7
+  peak_credits: 1.00
+  off_peak_credits: 0.50
+eight:
+  id: 8
+  name: Desk 8
+  short_name: Desk 8
+  peak_credits: 1.00
+  off_peak_credits: 0.50
+nine:
+  id: 9
+  name: Desk 9
+  short_name: Desk 9
+  peak_credits: 1.00
+  off_peak_credits: 0.50
+ten:
+  id: 10
+  name: Desk 10
+  short_name: Desk 10
+  peak_credits: 1.00
+  off_peak_credits: 0.50
+eleven:
+  id: 11
+  name: Private Office
+  short_name: Private Office
+  peak_credits: 2.00
+  off_peak_credits: 1.00
+twelve:
+  id: 12
+  name: Conference Room
+  short_name: Conf Room
+  peak_credits: 3.00
+  off_peak_credits: 1.50

@@ -1,0 +1,24 @@
+<% content_for :main do -%>
+<style>
+	td { padding: 3px; }
+</style>
+<table bgcolor="#999999" cellspacing="1" cellpadding="5" width="600">
+	<tr bgcolor="#BBBBBB">
+		<th>Resource</th>
+		<th>Day</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Credits</th>
+	</tr>
+  <% @reservations.each do |reservation| %>
+    <tr bgcolor="#FFFFFF">
+      <td><%= reservation.resource.name %></td>
+      <td><%= reservation.start.strftime('%A, %B %d') %></td>
+      <td align="right"><%= reservation.start.strftime("%l:%M%p") %></td>
+      <td align="right"><%= reservation.end.strftime("%l:%M%p") %></td>
+      <td align="right"><%= reservation.credits %></td>
+    </tr>
+  <% end %>	
+</table>
+
+<% end %>

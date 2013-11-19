@@ -1,0 +1,129 @@
+div.table {
+  ul.types { overflow: hidden; float: right; margin: 0 0 5px; }
+  ul.types li { float: left; padding: 0 0 0 5px; }
+  ul.types a { padding: 0 0 0 5px; }
+  ul.types a.selected { color: #000; font-weight: bold; }
+}
+div.table-filter {
+  overflow: hidden; border-left: 1px solid #E2C822; border-right: 1px solid #E2C822; background-color: #FFF9D7; padding: 5px 10px;
+  p.message { float: left; line-height: 20px; font-weight: bold; }
+  ul {
+    float: left; clear: both;
+    span { color: #900; font-weight: bold; }
+  }
+  ul.options {
+    float: right; overflow: hidden;
+    li { float: left; margin: 0 0 0 5px; }
+  }
+}
+div.table-header {
+  background-color: #666; color: #FFF; padding: 7px 10px 7px 7px; overflow: hidden; clear: both;
+  h2 { float: left; font-size: 12px; color: #FFF; }
+  form { float: right }
+  input.form-text { border: none; padding: 3px; }
+  ul.actions { background: url(/images/arrow.gif) no-repeat 0 7px; padding: 0 0 0 20px !important; float: left; }
+  form.search { float: right; }
+  input { background-color: #EEE; }
+  select { background-color: #EEE; padding: 2px; border: none; }
+  form.search input.form-text { width: 200px; }
+  ul.actions {
+    overflow: hidden; padding: 0 0 0 20px; background: url(../images/arrow.gif) no-repeat 2px 8px; float: left;
+    li { float: left; margin: 0 5px 0 0; }
+  }
+  ul.next {
+    float: right; overflow: hidden;
+    li { float: left; margin: 0 0 0 5px; }
+  }
+}
+div.table-body {
+  border-left: 1px solid #DDD; margin: 0; clear: both;
+  td { font-size: 11px; line-height: 18px; }
+  th { font-size: 11px; line-height: 18px; }
+  table { border-collapse: collapse; width: 100%; }
+  thead th { background-color: #E0DCC5; }
+  thead td { background-color: #EEE; }
+  thead th,   thead td { border: 1px solid #E0DCC5; border-left: none; padding: 5px; font-weight: bold; text-align: left; }
+  thead .last { border-right: none; }
+  thead a { display: block; }
+  thead a.asc { background: url(../images/asc.png) no-repeat right 1px; }
+  thead a.desc { background: url(../images/desc.png) no-repeat right 1px; }
+  thead a { color: #000; }
+  tbody td.subitem { padding: 5px 5px 5px 20px; }
+  tbody th,   tbody td { border-bottom: 1px solid #E0DCC5; border-right: 1px solid #E0DCC5; padding: 5px; }
+  tbody th { text-align: left; }
+  td.overdue { color: #900; }
+  tr.overdue td { color: #900; }
+  tr.header td { background-color: #EFD; }
+  tr.highlight th,
+  tr.highlight td { background-color: #FFA !important; }
+  tr.odd th,   tr.odd td { background-color: #FFF; }
+  tr.even th,   tr.even td { background-color: #EFD; }
+  .selected { background-color: #FDD !important; }
+  tfoot th { background-color: #DDD; text-align: left; }
+  tfoot th,   tfoot td { border-bottom: 1px solid #E0DCC5; border-right: 1px solid #E0DCC5; padding: 5px; }
+  tfoot .last { border-right: none; }
+  a.edit { background: url(/images/edit.png) no-repeat 0 0; text-indent: -9999px; display: block; width: 16px; float: left; }
+  a.delete { background: url(/images/delete.png) no-repeat 0 0; text-indent: -9999px; display: block; width: 16px; float: left; }
+
+}
+div.table-footer {
+  background-color: #333; color: #FFF; padding: 10px; overflow: hidden;
+  p { float: left; color: #FFF; }
+  div.pagination {
+    float: right; overflow: hidden;
+    span, a {
+      background: url(/images/button.gif); color: #DDD !important; border: none !important; padding: 5px !important; font-weight: bold !important;
+      &:hover { color: #FFF !important; }
+      &.current { background: #2E6AB1 !important; color: #FFF; }
+      &.disabled { display: none; }
+    }
+  }
+}
+div#events {
+  thead td { text-align: center; }
+  tbody td { padding: 0; }
+  tbody div.day { position: relative; padding: 20px 5px 5px; min-height: 100px; }
+  tbody span.date { position: absolute; top: 0; right: 0; border-left: 1px solid #CCC; border-bottom: 1px solid #CCC; display: block; width: 14px; height: 14px; font-size: 8px; line-height: 14px; text-align: center; background-color: #F3F1E9; color: #666; }
+  tbody td { vertical-align: top; }
+  td.past { background-color: #F6F6F6; }
+  td.today { background-color: #FFC; }
+  td.past div.item { background-color: #EEE !important; border: 1px solid #CCC; }
+  div.previous { width: 33%; float: left; text-align: left; }
+  div.month { width: 33%; float: left; text-align: center; }
+  div.next { width: 33%; float: right; text-align: right; }
+  div.item { padding: 2px 5px; margin: 0 0 5px; @include rounded(2px, 2px, 2px, 2px); position: relative; cursor: pointer; }
+  div.item-details { font-size: 9px; line-height: 12px; color: #444; }
+  div.popup {
+    position: absolute; top: -10px; left: 92px; display: none; z-index: 3;
+    &.active { display: block; }
+    div.popup-details { background-color: #FFF; border: 2px solid #CCC; @include rounded(2px, 2px, 2px, 2px); padding: 5px 5px 5px 27px; width: 200px; position: absolute; left: 7px; min-height: 25px;background-color: #FFF; background-repeat: no-repeat; background-position: 5px 5px; }
+    div.popup-quote { background: url(../images/quote.png) no-repeat 0 0; display: block; width: 16px; height: 16px; text-indent: -9999px; top: 10px; left: 0; position: absolute; z-index: 7; }
+    h2 { font-size: 12px; line-height: 12px; margin: 0 0 5px; }
+    p { font-size: 10px; line-height: 16px; color: #888; }
+    strong { color: #444; }
+    span.close { color: #AAA; font-size: 11px; line-height: 11px; position: absolute; top: 5px; right: 5px; }
+  }
+  div.event {
+    background-color: #FEF2D3; border: 1px solid #FAD165;
+    div.popup-details { background-image: url(../images/event.png); }
+  } 
+  .todo {
+    background-color: #E6DAF7; border: 1px solid #B38CED;
+    div.popup-details { background-image: url(../images/todo.png); }
+  } 
+  .invoice {
+    background-color: #EAF5DC; border: 1px solid #B3DC6C;
+    div.popup-details { background-image: url(../images/invoice.png); }
+  }
+  .bill {
+    background-color: #DBE7FA; border: 1px solid #8FB5F2;
+    div.popup-details { background-image: url(../images/bill.png); }
+  }
+}
+div#legend {
+  .event { background-color: #FEF2D3; border: 1px solid #FAD165; }
+  .todo { background-color: #E6DAF7; border: 1px solid #B38CED; }
+  .invoice { background-color: #EAF5DC; border: 1px solid #B3DC6C; }
+  .bill { background-color: #DBE7FA; border: 1px solid #8FB5F2; }
+  span { display: block; float: left; font-size: 16px; line-height: 16px; width: 16px; height: 16px; margin: 0 5px 0 0; clear: both; @include rounded(2px, 2px, 2px, 2px); }
+}

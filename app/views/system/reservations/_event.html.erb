@@ -1,0 +1,16 @@
+<div class="reservation event" style="height:<%= itemheight %>px;top:<%= top %>px;">
+  <p class="caption"><%= reservation.description %></p>
+  <div class="popup">
+    <div class="popup-quote">&nbsp;</div>
+    <div class="popup-details">
+      <div class="popup-content">
+        <h2><%= reservation.description %></h2>
+        <p class="time">  
+          <%= reservation.start.strftime('%a, %b %d') %>,
+          <%= reservation.start.strftime("%l:%M%p") %> to
+          <%= reservation.end.strftime("%l:%M%p") %></p>
+        <span class="close">x</span>
+      </div>
+    </div>
+  </div>              
+</div>

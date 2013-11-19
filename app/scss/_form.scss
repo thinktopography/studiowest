@@ -1,0 +1,65 @@
+div.flash { overflow: hidden; min-height: 10px; color: #001; margin: 0 0 10px; padding: 5px 10px 5px 26px; }
+div.flash span { float: right; padding: 4px; cursor: pointer; font-size: 12px; line-height: 12px; }
+div.success { border: 1px solid #AD7; background: #CCFF88 url(../images/tick.png) no-repeat 5px 7px; }
+div.success span { color: #AD7;  }
+div.success span:hover { background-color: #AD7; color: #FFF; }
+div.warning { border: 1px solid #E2C822; background: #FFF9D7 url(../images/warning.png) no-repeat 5px 7px; margin: 0 0 10px; padding: 5px 10px 5px 25px; }
+div.warning span { color: #E2C822;  }
+div.warning span:hover { background-color: #E2C822; color: #FFF; }
+div.error { border: 1px solid #900; background: #900 url(../images/error.png) no-repeat 5px 7px; color: #FFF; }
+div.error strong { color: #FFC; }
+div.error span { color: #FFF;  }
+div.error span:hover { background-color: #900; color: #FFF; }
+
+div.errorSummary { margin: 0 0 10px; border: 1px solid #663300; background-color: #FFAA88; color: #663300; padding: 10px; }
+div.errorSummary p { font-weight: bold; padding: 0 !important; }
+div.errorSummary li { list-style: disc; margin: 0 0 0 15px; }
+
+div.form-delete {
+  border: 1px solid #E2C822; background: #FFF9D7 url(../images/warning.png) no-repeat 5px 7px; padding: 5px 10px 5px 30px; margin: 0 0 10px;
+  p { margin: 0 0 5px; }
+}
+
+div.terms {
+  overflow-y: scroll; height: 400px; padding: 10px;
+  p { font-size: 11px; margin: 0 0 18px; }
+  li { font-size: 11px; margin: 0 0 0 15px; list-style: disc; }
+}
+div.form {
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25); -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25); margin: 0 10px; background-color: #FFF; margin: 60px auto; width: 460px;
+  &#code h2 { text-align: center; }
+  div.header {
+    background-color: #000; padding: 10px;
+    p { color: #FFF; margin: 0 0 20px; margin: 0; }
+    h2 { color: #ffb001; font-size: 28px; line-height: 42px;margin: 0; }
+    a { color: #ffb001 }
+  }
+  h1 { font-size: 48px; padding: 20px; text-align: center; }
+  div.body { padding: 10px; }
+  div.buttons { background-color: #DDD; border-top: 1px solid #CCC; padding: 10px; text-align: right; }  
+  textarea,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="password"] { border: 1px solid #CCC; background-color: #EEE; padding: 10px; width: 415px; margin: 0 0 20px; }
+  input[type="submit"] { background: url(/images/button.gif); color: #DDD; font-weight: bold; padding: 10px 20px; font-size: 13px; line-height: 16px; display: block-inline; border: none; cursor: pointer; margin: 0 0 0 10px; }
+  div.error_description { background: #D94316; color: #FFF; padding: 2px 5px; margin: 0 0 10px; font-size: 11px; }
+  div.field_with_errors {
+    display: inline;
+    label { color: #900; }
+    select, textarea, input { border: 1px solid #D94316 !important; background-color: #FEE !important; }
+  }
+  div.enabled {
+    padding: 10px; border: 1px solid #CCC; background: #FFD; margin: 0 0 10px; width: 415px;
+  }
+  div.thumbnail,div.logo {
+    overflow: hidden; padding: 10px; border: 1px solid #CCC; background: #EEE; margin: 0 0 10px; width: 415px;
+    img { float: left; margin: 0 10px 0 0; }
+    div.details { float: left; }
+  }
+}
+
+div.code {
+  h1,p { text-align: center;}
+}

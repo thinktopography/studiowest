@@ -1,0 +1,9 @@
+<% time = Time.parse("07:00:00") %>
+<% 64.times do |j| %>
+  <% start = time %>
+  <% time = time.in(15.minutes) %>
+  <% klass = ['slot'] %>
+  <% klass << 'prime' if (j < (44) && !weekend) %>
+  <% klass << 'top' if (j % 4 == 0) %>
+  <div class="<%= klass.join(' ') %>" style="height:<%= height %>px;" data-unit="<%= j %>" data-start="<%= start.strftime("%I:%M %p") %>" data-end="<%= time.strftime("%I:%M %p") %>"></div>
+<% end %>

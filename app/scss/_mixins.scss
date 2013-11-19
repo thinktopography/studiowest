@@ -1,0 +1,12 @@
+@mixin rounded($tl, $tr, $br, $bl) {
+  -moz-border-radius: $tl $tr $br $bl;
+  -webkit-border-radius: $tl $tr $br $bl;
+  border-radius: $tl $tr $br $bl;
+}
+@mixin opacity($x, $y) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$x)";
+  filter: alpha(opacity=$x);
+  -moz-opacity: $y;
+  -khtml-opacity: $y;
+  opacity: $y;
+}

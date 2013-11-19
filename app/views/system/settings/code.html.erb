@@ -1,0 +1,48 @@
+<% content_for :main do %>
+
+  <div class="form" id="code">
+
+    <% if @show_code %>
+		
+      <div class="header">
+        <h2>Your entry code is</h2>
+      </div>
+			<div class="body">
+        <h1><%= current_user.code.number %></h1>
+		  </div>
+		  	
+		<% else %>
+
+		  <div class="header">
+		  	<h2>Retrieve Entry Code</h2>
+        <p>Please enter your password to retrieve your building code</p>
+	  	</div>
+
+      <% form_for @user, :url => code_settings_url do |f| %>
+      
+        <div class="body">
+          
+    
+          <dl>
+          	
+						<dt><%= f.label :password %></dt>
+            <dd><%= f.password_field :password, :autocomplete => 'off' %></dd>
+          
+          </dl>
+  
+        </div>
+      
+        <div class="buttons">
+      
+          <%= link_to 'Cancel', reservations_url %> or 
+          <%= f.submit "Get Code", { :class => "button" } %>
+          
+        </div>
+      
+      <% end %>
+
+		<% end %>
+  
+  </div>
+
+<% end %>

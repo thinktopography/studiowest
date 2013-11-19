@@ -1,0 +1,58 @@
+<div class="reservation-panel">
+	
+  <div class="reservation-form">
+    
+    <div class="innerform">
+			<table cellpadding="0" cellspacing="2">
+				<thead>
+          <tr>
+            <td width="80">MONTH</td>
+            <td width="220">REMAINING CREDITS</td>
+          </tr>
+				</thead>
+				<tbody>
+	        <% current_user.memberships.unexpired.each do |membership| %>
+	          <tr class="<%= cycle('odd','even') %>">
+	            <td><%= membership.start.strftime('%B') %></td>
+	            <td><%= number_with_precision(membership.available_credits, :precision => 3) %> / <%= number_with_precision(membership.credits, :precision => 3) %></td>
+	          </tr>
+	        <% end %>
+				</tbody>
+			</table>
+            
+      <% form_for @reservation, :url => reservations_url do |f| %>
+      
+        <dl>
+        	
+					<%= f.date_field_control @reservation, :date %>
+          
+				  <% options = options_from_collection_for_select Resource.find(:all), :id, :name, @reservation.resource_id %>
+				  <%= f.select_control @reservation, :resource_id, { :class => 'required' }, { :include_blank => '', :options => options } %>
+          
+          <% options = [] %>
+          <% time = Time.parse("07:00:00") %>
+					<% 65.times do |i| %>
+					  <% options << time.strftime("%I:%M %p") %>
+						<% time = time.in(15.minutes)%>
+					<% end %>
+
+          <%= f.select_control @reservation, :start_time, { :class => 'required', :text => 'Start' }, { :include_blank => '', :options => options } %>
+
+          <%= f.select_control @reservation, :end_time, { :class => 'required', :text => 'End' }, { :include_blank => '', :options => options } %>
+          
+        </dl>
+      
+        <div class="buttons">
+ 
+          <span class="reset">Reset</span> or 
+          <%= f.submit "Reserve It", { :class => "button" } %>
+          
+        </div>        
+      
+      <% end %>
+        
+    </div>
+  
+  </div>
+	
+</div>

@@ -1,0 +1,24 @@
+one:
+  id: 1
+  first_name: Greg
+  last_name: Kops
+  email: greg@thinktopography.com
+  encrypted_password: $2a$10$1CbRWgGUenlXbXUf03hHh.WIjwJ/XbVYMbH4J7tfiNjYxSfdU7e6u
+  confirmed_at: <%= Time.now.to_s(:db) %>  
+  code_id: 1
+two:
+  id: 2
+  first_name: Danielle
+  last_name: Klock
+  email: danielle@thinktopography.com
+  encrypted_password: $2a$10$1CbRWgGUenlXbXUf03hHh.WIjwJ/XbVYMbH4J7tfiNjYxSfdU7e6u
+  confirmed_at: <%= Time.now.to_s(:db) %>
+  code_id: 1
+three:
+  id: 3
+  first_name: Scott
+  last_name: Hamilton
+  email: scott@thinktopography.com
+  encrypted_password: $2a$10$1CbRWgGUenlXbXUf03hHh.WIjwJ/XbVYMbH4J7tfiNjYxSfdU7e6u
+  confirmed_at: <%= Time.now.to_s(:db) %>
+  code_id: 1

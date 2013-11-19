@@ -1,0 +1,295 @@
+* { margin: 0px; padding: 0px; list-style: none; outline: none; }
+
+body { font-family: lucida grande,tahoma,verdana,arial,sans-serif; font-size: 12px; line-height: 22px; }
+
+textarea { font-family: lucida grande,tahoma,verdana,arial,sans-serif; }
+
+img { border: none; }
+
+a { text-decoration: none; outline: none; color: #00C; }
+
+a:hover { color: #C00; }
+
+p, input, textarea, select, dt, dd, li { font-size: 13px; line-height: 20px; }
+
+textarea { font-size: 13px; line-height: 20px; }
+
+li { font-size: 13px; line-height: 20px; }
+
+ol li { list-style-type: decimal; margin: 0 0 0 20px; }
+
+div.flash { overflow: hidden; min-height: 10px; color: #001; margin: 0 0 10px; padding: 5px 10px 5px 26px; }
+
+div.flash span { float: right; padding: 4px; cursor: pointer; font-size: 12px; line-height: 12px; }
+
+div.success { border: 1px solid #AD7; background: #ccff88 url(../images/tick.png) no-repeat 5px 7px; }
+
+div.success span { color: #AD7; }
+
+div.success span:hover { background-color: #AD7; color: #FFF; }
+
+div.warning { border: 1px solid #E2C822; background: #fff9d7 url(../images/warning.png) no-repeat 5px 7px; margin: 0 0 10px; padding: 5px 10px 5px 25px; }
+
+div.warning span { color: #E2C822; }
+
+div.warning span:hover { background-color: #E2C822; color: #FFF; }
+
+div.error { border: 1px solid #900; background: #990000 url(../images/error.png) no-repeat 5px 7px; color: #FFF; }
+
+div.error strong { color: #FFC; }
+
+div.error span { color: #FFF; }
+
+div.error span:hover { background-color: #900; color: #FFF; }
+
+div.errorSummary { margin: 0 0 10px; border: 1px solid #663300; background-color: #FFAA88; color: #663300; padding: 10px; }
+
+div.errorSummary p { font-weight: bold; padding: 0 !important; }
+
+div.errorSummary li { list-style: disc; margin: 0 0 0 15px; }
+
+div.form-delete { border: 1px solid #E2C822; background: #fff9d7 url(../images/warning.png) no-repeat 5px 7px; padding: 5px 10px 5px 30px; margin: 0 0 10px; }
+div.form-delete p { margin: 0 0 5px; }
+
+div.terms { overflow-y: scroll; height: 400px; padding: 10px; }
+div.terms p { font-size: 11px; margin: 0 0 18px; }
+div.terms li { font-size: 11px; margin: 0 0 0 15px; list-style: disc; }
+
+div.form { -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); margin: 0 10px; background-color: #FFF; margin: 60px auto; width: 460px; }
+div.form#code h2 { text-align: center; }
+div.form div.header { background-color: #000; padding: 10px; }
+div.form div.header p { color: #FFF; margin: 0 0 20px; margin: 0; }
+div.form div.header h2 { color: #ffb001; font-size: 28px; line-height: 42px; margin: 0; }
+div.form div.header a { color: #ffb001; }
+div.form h1 { font-size: 48px; padding: 20px; text-align: center; }
+div.form div.body { padding: 10px; }
+div.form div.buttons { background-color: #DDD; border-top: 1px solid #CCC; padding: 10px; text-align: right; }
+div.form textarea, div.form input[type="text"], div.form input[type="email"], div.form input[type="tel"], div.form input[type="url"], div.form input[type="password"] { border: 1px solid #CCC; background-color: #EEE; padding: 10px; width: 415px; margin: 0 0 20px; }
+div.form input[type="submit"] { background: url(/images/button.gif); color: #DDD; font-weight: bold; padding: 10px 20px; font-size: 13px; line-height: 16px; display: block-inline; border: none; cursor: pointer; margin: 0 0 0 10px; }
+div.form div.error_description { background: #D94316; color: #FFF; padding: 2px 5px; margin: 0 0 10px; font-size: 11px; }
+div.form div.field_with_errors { display: inline; }
+div.form div.field_with_errors label { color: #900; }
+div.form div.field_with_errors select, div.form div.field_with_errors textarea, div.form div.field_with_errors input { border: 1px solid #D94316 !important; background-color: #FEE !important; }
+div.form div.enabled { padding: 10px; border: 1px solid #CCC; background: #FFD; margin: 0 0 10px; width: 415px; }
+div.form div.thumbnail, div.form div.logo { overflow: hidden; padding: 10px; border: 1px solid #CCC; background: #EEE; margin: 0 0 10px; width: 415px; }
+div.form div.thumbnail img, div.form div.logo img { float: left; margin: 0 10px 0 0; }
+div.form div.thumbnail div.details, div.form div.logo div.details { float: left; }
+
+div.code h1, div.code p { text-align: center; }
+
+div.table ul.types { overflow: hidden; float: right; margin: 0 0 5px; }
+div.table ul.types li { float: left; padding: 0 0 0 5px; }
+div.table ul.types a { padding: 0 0 0 5px; }
+div.table ul.types a.selected { color: #000; font-weight: bold; }
+
+div.table-filter { overflow: hidden; border-left: 1px solid #E2C822; border-right: 1px solid #E2C822; background-color: #FFF9D7; padding: 5px 10px; }
+div.table-filter p.message { float: left; line-height: 20px; font-weight: bold; }
+div.table-filter ul { float: left; clear: both; }
+div.table-filter ul span { color: #900; font-weight: bold; }
+div.table-filter ul.options { float: right; overflow: hidden; }
+div.table-filter ul.options li { float: left; margin: 0 0 0 5px; }
+
+div.table-header { background-color: #666; color: #FFF; padding: 7px 10px 7px 7px; overflow: hidden; clear: both; }
+div.table-header h2 { float: left; font-size: 12px; color: #FFF; }
+div.table-header form { float: right; }
+div.table-header input.form-text { border: none; padding: 3px; }
+div.table-header ul.actions { background: url(/images/arrow.gif) no-repeat 0 7px; padding: 0 0 0 20px !important; float: left; }
+div.table-header form.search { float: right; }
+div.table-header input { background-color: #EEE; }
+div.table-header select { background-color: #EEE; padding: 2px; border: none; }
+div.table-header form.search input.form-text { width: 200px; }
+div.table-header ul.actions { overflow: hidden; padding: 0 0 0 20px; background: url(../images/arrow.gif) no-repeat 2px 8px; float: left; }
+div.table-header ul.actions li { float: left; margin: 0 5px 0 0; }
+div.table-header ul.next { float: right; overflow: hidden; }
+div.table-header ul.next li { float: left; margin: 0 0 0 5px; }
+
+div.table-body { border-left: 1px solid #DDD; margin: 0; clear: both; }
+div.table-body td { font-size: 11px; line-height: 18px; }
+div.table-body th { font-size: 11px; line-height: 18px; }
+div.table-body table { border-collapse: collapse; width: 100%; }
+div.table-body thead th { background-color: #E0DCC5; }
+div.table-body thead td { background-color: #EEE; }
+div.table-body thead th, div.table-body thead td { border: 1px solid #E0DCC5; border-left: none; padding: 5px; font-weight: bold; text-align: left; }
+div.table-body thead .last { border-right: none; }
+div.table-body thead a { display: block; }
+div.table-body thead a.asc { background: url(../images/asc.png) no-repeat right 1px; }
+div.table-body thead a.desc { background: url(../images/desc.png) no-repeat right 1px; }
+div.table-body thead a { color: #000; }
+div.table-body tbody td.subitem { padding: 5px 5px 5px 20px; }
+div.table-body tbody th, div.table-body tbody td { border-bottom: 1px solid #E0DCC5; border-right: 1px solid #E0DCC5; padding: 5px; }
+div.table-body tbody th { text-align: left; }
+div.table-body td.overdue { color: #900; }
+div.table-body tr.overdue td { color: #900; }
+div.table-body tr.header td { background-color: #EFD; }
+div.table-body tr.highlight th, div.table-body tr.highlight td { background-color: #FFA !important; }
+div.table-body tr.odd th, div.table-body tr.odd td { background-color: #FFF; }
+div.table-body tr.even th, div.table-body tr.even td { background-color: #EFD; }
+div.table-body .selected { background-color: #FDD !important; }
+div.table-body tfoot th { background-color: #DDD; text-align: left; }
+div.table-body tfoot th, div.table-body tfoot td { border-bottom: 1px solid #E0DCC5; border-right: 1px solid #E0DCC5; padding: 5px; }
+div.table-body tfoot .last { border-right: none; }
+div.table-body a.edit { background: url(/images/edit.png) no-repeat 0 0; text-indent: -9999px; display: block; width: 16px; float: left; }
+div.table-body a.delete { background: url(/images/delete.png) no-repeat 0 0; text-indent: -9999px; display: block; width: 16px; float: left; }
+
+div.table-footer { background-color: #333; color: #FFF; padding: 10px; overflow: hidden; }
+div.table-footer p { float: left; color: #FFF; }
+div.table-footer div.pagination { float: right; overflow: hidden; }
+div.table-footer div.pagination span, div.table-footer div.pagination a { background: url(/images/button.gif); color: #DDD !important; border: none !important; padding: 5px !important; font-weight: bold !important; }
+div.table-footer div.pagination span:hover, div.table-footer div.pagination a:hover { color: #FFF !important; }
+div.table-footer div.pagination span.current, div.table-footer div.pagination a.current { background: #2E6AB1 !important; color: #FFF; }
+div.table-footer div.pagination span.disabled, div.table-footer div.pagination a.disabled { display: none; }
+
+div#events thead td { text-align: center; }
+div#events tbody td { padding: 0; }
+div#events tbody div.day { position: relative; padding: 20px 5px 5px; min-height: 100px; }
+div#events tbody span.date { position: absolute; top: 0; right: 0; border-left: 1px solid #CCC; border-bottom: 1px solid #CCC; display: block; width: 14px; height: 14px; font-size: 8px; line-height: 14px; text-align: center; background-color: #F3F1E9; color: #666; }
+div#events tbody td { vertical-align: top; }
+div#events td.past { background-color: #F6F6F6; }
+div#events td.today { background-color: #FFC; }
+div#events td.past div.item { background-color: #EEE !important; border: 1px solid #CCC; }
+div#events div.previous { width: 33%; float: left; text-align: left; }
+div#events div.month { width: 33%; float: left; text-align: center; }
+div#events div.next { width: 33%; float: right; text-align: right; }
+div#events div.item { padding: 2px 5px; margin: 0 0 5px; -moz-border-radius: 2px 2px 2px 2px; -webkit-border-radius: 2px 2px 2px 2px; border-radius: 2px 2px 2px 2px; position: relative; cursor: pointer; }
+div#events div.item-details { font-size: 9px; line-height: 12px; color: #444; }
+div#events div.popup { position: absolute; top: -10px; left: 92px; display: none; z-index: 3; }
+div#events div.popup.active { display: block; }
+div#events div.popup div.popup-details { background-color: #FFF; border: 2px solid #CCC; -moz-border-radius: 2px 2px 2px 2px; -webkit-border-radius: 2px 2px 2px 2px; border-radius: 2px 2px 2px 2px; padding: 5px 5px 5px 27px; width: 200px; position: absolute; left: 7px; min-height: 25px; background-color: #FFF; background-repeat: no-repeat; background-position: 5px 5px; }
+div#events div.popup div.popup-quote { background: url(../images/quote.png) no-repeat 0 0; display: block; width: 16px; height: 16px; text-indent: -9999px; top: 10px; left: 0; position: absolute; z-index: 7; }
+div#events div.popup h2 { font-size: 12px; line-height: 12px; margin: 0 0 5px; }
+div#events div.popup p { font-size: 10px; line-height: 16px; color: #888; }
+div#events div.popup strong { color: #444; }
+div#events div.popup span.close { color: #AAA; font-size: 11px; line-height: 11px; position: absolute; top: 5px; right: 5px; }
+div#events div.event { background-color: #FEF2D3; border: 1px solid #FAD165; }
+div#events div.event div.popup-details { background-image: url(../images/event.png); }
+div#events .todo { background-color: #E6DAF7; border: 1px solid #B38CED; }
+div#events .todo div.popup-details { background-image: url(../images/todo.png); }
+div#events .invoice { background-color: #EAF5DC; border: 1px solid #B3DC6C; }
+div#events .invoice div.popup-details { background-image: url(../images/invoice.png); }
+div#events .bill { background-color: #DBE7FA; border: 1px solid #8FB5F2; }
+div#events .bill div.popup-details { background-image: url(../images/bill.png); }
+
+div#legend .event { background-color: #FEF2D3; border: 1px solid #FAD165; }
+div#legend .todo { background-color: #E6DAF7; border: 1px solid #B38CED; }
+div#legend .invoice { background-color: #EAF5DC; border: 1px solid #B3DC6C; }
+div#legend .bill { background-color: #DBE7FA; border: 1px solid #8FB5F2; }
+div#legend span { display: block; float: left; font-size: 16px; line-height: 16px; width: 16px; height: 16px; margin: 0 5px 0 0; clear: both; -moz-border-radius: 2px 2px 2px 2px; -webkit-border-radius: 2px 2px 2px 2px; border-radius: 2px 2px 2px 2px; }
+
+body { background-color: #333; }
+
+div.application { width: 1010px; margin: 35px auto 0; }
+
+div.navbar { background-color: #000; position: fixed; top: 0; width: 100%; z-index: 99; }
+div.navbar div.inside { padding: 0; margin: 0 auto; width: 960px; }
+div.navbar a.facebook { display: block; width: 32px; height: 32px; background: url(../images/facebook.png) no-repeat 0 0; text-indent: -9999px; }
+div.navbar a { color: #ffb001; }
+div.navbar div.menu { float: left; padding: 5px 0; }
+div.navbar div.menu ul { overflow: hidden; margin: 0 0 0 10px; }
+div.navbar div.menu li { float: left; margin: 0; }
+div.navbar div.menu li a { display: block; padding: 3px 10px; }
+div.navbar div.menu li a:hover { background-color: #ffb001; color: #FFF; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; }
+div.navbar div.presence { padding: 0 0 0 20px; float: right; margin: 0 10px; position: relative; }
+div.navbar div.presence.active ul { display: block; }
+div.navbar div.presence.active p { background-color: #666; }
+div.navbar div.presence p { display: block; overflow: hidden; padding: 8px 0; }
+div.navbar div.presence img { float: left; padding: 3px 5px 0; }
+div.navbar div.presence strong { font-size: 11px; line-height: 11px; padding: 5px 0; display: block; float: left; }
+div.navbar div.presence span { padding: 0 20px 0 0; font-weight: bold; color: #FFF; background: url(../images/dropdown.png) no-repeat right 3px; cursor: pointer; display: block; float: right; line-height: 11px; }
+div.navbar div.presence ul { display: none; position: absolute; top: 37px; right: 0; background-color: #666; border: 2px solid #666; }
+div.navbar div.presence ul a { display: block; padding: 5px; color: #fff; width: 150px; }
+div.navbar div.presence ul a:hover { background-color: #EEE; color: #333; }
+
+div.ui-datepicker { z-index: 101 !important; }
+
+div.panel { padding: 10px 0 10px 10px; float: left; clear: both; }
+div.panel div.schedule { background-color: #d94316; width: 760px; padding: 10px 10px 0; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; }
+div.panel div.schedule div.schedule-list { height: 479px; overflow-y: scroll; background-color: #FFF; }
+div.panel div.schedule div.schedule-list li { padding: 5px 10px; border-bottom: 1px solid #DDD; font-size: 11px; line-height: 16px; }
+div.panel div.schedule div.schedule-list li.day { background-color: #AAA; color: #FFF; font-weight: bold; }
+div.panel div.schedule div.title { overflow: hidden; font-size: 14px; padding: 10px; overflow: hidden; background-color: #AAA; margin: 0 0 10px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; color: #FFF; }
+div.panel div.schedule div.title a { float: left; display: block; width: 70px; height: 26px; line-height: 26px; margin: 0 0 0 1px; color: #333; font-size: 10px; }
+div.panel div.schedule div.title a.previous { background: url(../images/previous.png) no-repeat 0 0; text-align: right; padding: 0 10px 0 0; }
+div.panel div.schedule div.title a.today { background-color: #FFF; text-align: center; }
+div.panel div.schedule div.title a.next { background: url(../images/next.png) no-repeat 0 0; text-align: left; padding: 0 0 0 10px; }
+div.panel div.schedule div.title a.previous:hover { background-image: url(../images/previous-over.png); }
+div.panel div.schedule div.title a.next:hover { background-image: url(../images/next-over.png); }
+div.panel div.schedule div.title div.pager { float: right; }
+div.panel div.schedule div.title select { border: none; margin: 0 5px 0 0; padding: 4px; }
+div.panel div.schedule div.schedule-grid { position: relative; }
+div.panel div.schedule div.now { position: absolute; height: 1px; background-color: red; display: block; z-index: 8; }
+div.panel div.schedule div.column { float: left; }
+div.panel div.schedule div.column-header { margin-left: 1px; height: 30px; text-align: center; font-size: 11px; line-height: 14px; color: #FFF; padding: 0; font-weight: bold; }
+div.panel div.schedule div.column-body { position: relative; }
+div.panel div.schedule div.hour { background-color: #EEE; text-align: right; font-size: 10px; line-height: 12px; border-top: 1px solid #888; border-left: 1px solid #888; height: 8px; padding: 0 2px 0 0; }
+div.panel div.schedule div.slot { background-color: #FFF; text-align: center; border-top: 1px solid #BBB; border-left: 1px solid #BBB; height: 8px; }
+div.panel div.schedule div.prime { background-color: #E0E0E0; }
+div.panel div.schedule div.top { border-top: 1px solid #777; }
+div.panel div.schedule .event { background-color: #4986E7; border: 1px solid #2C70D1; }
+div.panel div.schedule .yours { background-color: #FAD165; border: 1px solid #BF9608; }
+div.panel div.schedule .others { background-color: #16A765; border: 1px solid #007D39; }
+div.panel div.schedule .new { background-color: #CCC; border: 1px dashed #666; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$x)"; filter: alpha(opacity=60); -moz-opacity: 0.6; -khtml-opacity: 0.6; opacity: 0.6; }
+div.panel div.schedule .peak { background-color: #E0E0E0; border: 1px solid #777; }
+div.panel div.schedule div.legend { clear: both; padding: 10px 0; overflow: hidden; }
+div.panel div.schedule div.legend ul { overflow: hidden; float: left; }
+div.panel div.schedule div.legend li { float: left; margin: 0 10px 0 0; color: #FFF; }
+div.panel div.schedule div.legend span.floorplan-show { float: right; color: #FFF; width: auto; cursor: pointer; }
+div.panel div.schedule div.legend span { display: block; width: 16px; height: 16px; float: left; margin: 0 5px 0 0; }
+div.panel div.schedule div.legend a { color: #FFF; }
+div.panel div.schedule input.datepicker { border: none; width: 100px; background: white url(../images/calendar.png) no-repeat 4px 4px; padding: 5px 5px 5px 25px; }
+div.panel div.schedule div.right div.popup { right: 0; }
+div.panel div.schedule div.right div.popup-quote { background: url(../images/quote-right.png) no-repeat 0 0; left: 0; }
+div.panel div.schedule div.left div.popup { left: -280px; }
+div.panel div.schedule div.left div.popup-quote { background: url(../images/quote-left.png) no-repeat 0 0; left: 269px; }
+div.panel div.schedule div.schedule-day div.event { left: 64px; width: 695px; }
+div.panel div.schedule div.reservation { height: 19px; position: absolute; font-size: 8px; line-height: 10px; width: 99%; -moz-border-radius: 2px 2px 2px 2px; -webkit-border-radius: 2px 2px 2px 2px; border-radius: 2px 2px 2px 2px; cursor: pointer; }
+div.panel div.schedule div.reservation p.caption { text-align: center; color: #FFF; padding: 5px 10px; font-size: 11px; line-height: 11px; }
+div.panel div.schedule div.reservation div.popup { position: absolute; top: -5px; right: -1px; z-index: 9; display: none; }
+div.panel div.schedule div.reservation div.popup.active { display: block; }
+div.panel div.schedule div.reservation div.popup div.popup-details { background-color: #FFF; border: 2px solid #CCC; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; padding: 5px; width: 250px; position: absolute; left: 7px; min-height: 25px; overflow: hidden; }
+div.panel div.schedule div.reservation div.popup div.popup-quote { display: block; width: 16px; height: 16px; text-indent: -9999px; top: 10px; position: absolute; z-index: 7; }
+div.panel div.schedule div.reservation div.popup div.popup-content { width: 195px; float: right; }
+div.panel div.schedule div.reservation div.popup img { float: left; margin: 0 5px 0 0; }
+div.panel div.schedule div.reservation div.popup h2 { font-size: 12px; line-height: 18px; margin: 0; }
+div.panel div.schedule div.reservation div.popup p { font-size: 10px; line-height: 16px; color: #666; }
+div.panel div.schedule div.reservation div.popup strong { color: #666; }
+div.panel div.schedule div.reservation div.popup span.close { cursor: pointer; color: #AAA; font-size: 12px; line-height: 12px; position: absolute; top: 2px; right: 5px; }
+
+div.reservation-panel { margin: 60px 0 0; float: left; }
+div.reservation-panel p.credits { color: #FFF; font-size: 11px; padding: 0 10px; }
+div.reservation-panel p.credits strong { color: #ffb001; }
+div.reservation-panel div.reservation-form { overflow: hidden; width: 220px; }
+div.reservation-panel div.innerform { background-color: #ffb001; padding: 20px 10px; -moz-border-radius: 0 10px 10px 0; -webkit-border-radius: 0 10px 10px 0; border-radius: 0 10px 10px 0; border: 10px solid #FFF; border-left: none; height: 480px; }
+div.reservation-panel h2 { margin: 0 0 10px; font-weight: normal; color: #8c2b0e; }
+div.reservation-panel dd { margin: 0 0 10px; }
+div.reservation-panel label { color: #8c2b0e; cursor: pointer; }
+div.reservation-panel select { padding: 5px; border: none; width: 190px; border: 1px solid #ffb001; }
+div.reservation-panel input[type="text"] { padding: 5px; border: none; width: 178px; border: 1px solid #ffb001; }
+div.reservation-panel input.placeholder { color: #999; }
+div.reservation-panel input.datepicker { padding: 5px 5px 5px 25px; border: none; width: 158px; background: white url(../images/calendar.png) no-repeat 4px 4px; padding: 5px 5px 5px 25px; }
+div.reservation-panel div.buttons { text-align: right; margin: 0 0 10px; }
+div.reservation-panel div.buttons .button { background: url(/images/button.gif); color: #DDD; font-weight: bold; padding: 5px; font-size: 11px; line-height: 16px; display: block-inline; border: none; cursor: pointer; }
+div.reservation-panel div.buttons span { color: #009; text-decoration: underline; cursor: pointer; }
+div.reservation-panel div.rules { background-color: #FFF; padding: 10px; }
+div.reservation-panel div.rules li { font-size: 10px; color: #666; }
+div.reservation-panel div.error_description { background: #D94316; color: #FFF; padding: 2px 5px; margin: 0 0 10px; font-size: 11px; }
+div.reservation-panel div.field_with_errors { display: inline; }
+div.reservation-panel div.field_with_errors label { color: #900; }
+div.reservation-panel div.field_with_errors select, div.reservation-panel div.field_with_errors textarea, div.reservation-panel div.field_with_errors input { border: 1px solid #D94316 !important; background-color: #FEE !important; }
+div.reservation-panel table { margin: 0 0 10px; background: #666; }
+div.reservation-panel table th, div.reservation-panel table td { padding: 5px; font-size: 10px; line-height: 10px; }
+div.reservation-panel table thead th { background-color: #666; color: #FFF; font-weight: normal; }
+div.reservation-panel table thead td { background-color: #999; color: #FFF; }
+div.reservation-panel table tbody th { text-align: left; }
+div.reservation-panel table tbody tr.odd th, div.reservation-panel table tbody tr.odd td { background-color: #FFF; }
+div.reservation-panel table tbody tr.even th, div.reservation-panel table tbody tr.even td { background-color: #EEE; }
+
+div.floorplan { position: fixed; bottom: 0; width: 100%; height: 100%; background-color: #000; z-index: 10; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$x)"; filter: alpha(opacity=50); -moz-opacity: 0.5; -khtml-opacity: 0.5; opacity: 0.5; }
+
+div.floorplan-window { background-color: #333; padding: 10px; top: 20%; left: 20%; position: absolute; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border-radius: 10px 10px 10px 10px; z-index: 11; }
+
+div.tabs { overflow: hidden; clear: both; }
+div.tabs.selected { background: #F3F1E9; color: #31363E; }
+div.tabs ul { overflow: hidden; padding: 0; margin: 0 0 0 10px; float: left; }
+div.tabs li { float: left; padding: 0; margin: 0 3px 0 0; list-style: none; }
+div.tabs li a { display: block; background-color: #8c2b0e; padding: 5px 8px; color: #FFF; text-decoration: none; font-size: 12px; -moz-border-radius: 5px 5px 0 0; -webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0; }
+div.tabs li a.selected { background-color: #d94316; color: #FFF; }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Studio West - Coworking in Ithaca, New York</title>
+  <%= stylesheet_link_tag 'application' %>
+  <%= stylesheet_link_tag 'jquery.ui.css' %>
+  <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag 'jquery.ui' %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'application.navigation' %>
+  <%= javascript_include_tag 'application.events' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div class="navbar">
+   <div class="inside">
+    <%= render "layouts/navbar" %>
+  </div>
+</div>
+
+<div class="application">
+
+	<div class="body">
+		
+    <%= yield :main %>
+
+	</div>
+	
+</div>
+
+<div class="floorplan" style="display: none;">&nbsp;</div>
+<div class="floorplan-window" style="display: none;">
+  <%= image_tag 'floorplan.png', :size => '800x306' %>
+</div>
+
+</body>
+</html>

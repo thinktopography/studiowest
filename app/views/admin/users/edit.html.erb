@@ -1,0 +1,33 @@
+<% content_for :breadcrumbs do -%>
+  <%= link_to 'Dashboard', dashboard_url %> &raquo;
+  <%= link_to 'Users', users_url %> &raquo;
+  <%= link_to @user.contact.name, user_url(@user) %> &raquo;
+  <span>Edit User</span>
+<% end -%>
+
+<% content_for :main do -%>
+
+  <% form_for @user do |f| -%>
+
+    <div class="form">
+
+      <h2>User Details</h2>
+
+      <dl>
+        
+        <%= render 'form', :f => f %>
+    
+      </dl>
+  
+      <div class="buttons">
+      
+        <%= link_to 'Cancel', user_url(@user), :class => 'cancel' %>
+        <%= f.submit 'Update User', :class => 'button' %>
+      
+      </div>    
+    
+    </div>
+
+  <% end -%>
+
+<% end -%>

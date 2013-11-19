@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Studio West - Coworking in Ithaca, New York</title>
+	<meta property="og:site_name" content="Studiowest"/>
+	<meta property="og:title" content="Studio West - Coworking in Ithaca, New York"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://studiowestithaca.com"/>
+	<meta property="og:image" content="http://studiowestithaca.com/images/studiowest.jpg"/>
+	<meta property="og:description" content="Coworking creates the unique opportunity for you to be part of a creative community of professional peers. Learn more about coworking at Studio West!"/>
+  <%= stylesheet_link_tag 'site' %>
+  <%= stylesheet_link_tag 'jquery.ui.css' %>
+  <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag 'jquery.ui' %>
+  <%= javascript_include_tag 'jquery.scroll' %>
+  <%= javascript_include_tag 'site' %>
+  <%= javascript_include_tag 'application.navigation' %>
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAA1HEyMeD67N-tlDLFAy31BBSkPXk1d1mQL36-9Hg10fnteQBwVxTo204kO6xxj7gwPA7ClfXNOHcItQ" type="text/javascript"></script>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="inside">
+    <div class="menu">
+      <ul>
+        <li><%= link_to "Overview", home_url(:anchor => 'overview') %></li>
+        <li><%= link_to "Plans", home_url(:anchor => 'plans') %></li>
+        <li><%= link_to "Credits", home_url(:anchor => 'credits') %></li>
+        <li><%= link_to "Scheduling", home_url(:anchor => 'scheduling') %></li>
+        <li><%= link_to "Neighborhood", home_url(:anchor => 'neighborhood') %></li>
+        <li><%= link_to "Community", home_url(:anchor => 'community') %></li>
+        <li><%= link_to "Sign Up", home_url(:anchor => 'signup') %></li>
+      </ul>
+    </div>
+  	<%= render 'layouts/navbar' %>
+  </div>
+</div>
+
+<%= yield :main %>
+
+<div class="footer">
+  <div class="inner">
+  	<div class="byline">
+      <p>Studio West is a project of <%= link_to "Think Topography", "http://thinktopography.com", :target => '_blank' %>, a communications and information design company | <%= link_to 'Terms of Use', 'terms' %></p>
+  	</div>
+  </div>
+</div>
+
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28728228-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

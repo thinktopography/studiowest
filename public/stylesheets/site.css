@@ -1,0 +1,148 @@
+* { margin: 0px; padding: 0px; list-style: none; outline: none; }
+
+body { font-family: lucida grande,tahoma,verdana,arial,sans-serif; font-size: 12px; line-height: 22px; }
+
+textarea { font-family: lucida grande,tahoma,verdana,arial,sans-serif; }
+
+img { border: none; }
+
+a { text-decoration: none; outline: none; color: #00C; }
+
+a:hover { color: #C00; }
+
+p, input, textarea, select, dt, dd, li { font-size: 13px; line-height: 20px; }
+
+textarea { font-size: 13px; line-height: 20px; }
+
+li { font-size: 13px; line-height: 20px; }
+
+ol li { list-style-type: decimal; margin: 0 0 0 20px; }
+
+div.navbar { background-color: #000; position: fixed; top: 0; width: 100%; z-index: 99; }
+div.navbar div.inside { padding: 0; margin: 0 auto; width: 960px; }
+div.navbar a.facebook { display: block; width: 16px; height: 16px; background: url(../images/facebook-small.png) no-repeat 0 0; text-indent: -9999px; float: left; margin: 0 10px 0 0; }
+div.navbar a { color: #ffb001; }
+div.navbar div.menu { float: left; padding: 5px 0; }
+div.navbar div.menu ul { overflow: hidden; margin: 0 0 0 10px; }
+div.navbar div.menu li { float: left; margin: 0; }
+div.navbar div.menu li a { display: block; padding: 3px 10px; }
+div.navbar div.menu li a:hover { background-color: #ffb001; color: #FFF; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; }
+div.navbar div.presence { padding: 0 0 0 20px; float: right; margin: 0 10px; position: relative; }
+div.navbar div.presence.active ul { display: block; }
+div.navbar div.presence.active p { background-color: #666; }
+div.navbar div.presence p { display: block; overflow: hidden; padding: 8px 0; }
+div.navbar div.presence img { float: left; padding: 3px 5px 0; }
+div.navbar div.presence strong { font-size: 11px; line-height: 11px; padding: 5px 0; display: block; float: left; }
+div.navbar div.presence span { padding: 0 20px 0 0; font-weight: bold; color: #FFF; background: url(../images/dropdown.png) no-repeat right 3px; cursor: pointer; display: block; float: right; line-height: 11px; }
+div.navbar div.presence ul { display: none; position: absolute; top: 37px; right: 0; background-color: #666; border: 2px solid #666; }
+div.navbar div.presence ul a { display: block; padding: 5px; color: #fff; width: 150px; }
+div.navbar div.presence ul a:hover { background-color: #EEE; color: #333; }
+
+body { background-color: #000; }
+
+div.inner { margin: 0 auto; width: 960px; padding: 50px 0; overflow: hidden; }
+div.inner div.left { float: left; width: 480px; }
+div.inner div.right { float: right; width: 480px; }
+div.inner div.center { margin: 0 auto; width: 480px; }
+div.inner h2 { margin: 0 10px 10px; color: #FFF; }
+div.inner p { margin: 0 10px; color: #EEE; font-size: 14px; line-height: 30px; }
+
+div.table { border: 10px solid #FFF; -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); margin: 0 10px; background-color: #FFF; }
+div.table h2 { background-color: #000; color: #FFF; font-size: 12px; padding: 3px; text-align: center; margin: 0 0 10px; }
+div.table span.footnote { color: #F00; font-weight: bold; }
+div.table table { border-collapse: collapse; width: 440px; }
+div.table table thead th, div.table table thead td { padding: 5px 3px; border-top: 1x solid #FFF; border-right: 1x solid #FFF; }
+div.table table thead td { background-color: #FFF; text-align: center; vertical-align: bottom; color: #666; border-bottom: 1px solid #AAA; }
+div.table table thead td strong { color: #000; }
+div.table table tbody td, div.table table tbody th { border-right: 1px solid #AAA; border-bottom: 1px solid #AAA; font-size: 11px; }
+div.table table tbody th, div.table table tbody td { padding: 3px; }
+div.table table tbody th { border-left: 1px solid #AAA; text-align: left; }
+div.table table tbody td { text-align: center; color: #666; }
+div.table table tbody tr.odd td, div.table table tbody tr.odd th { background-color: #EEE; }
+div.table table tbody tr.even td, div.table table tbody tr.even th { background-color: #FFF; }
+div.table table tbody td.no { color: #900; }
+div.table table tbody td.yes { color: #090; }
+div.table table tbody strong { color: #e5592e; }
+div.table table tbody td .strike { text-decoration: line-through; }
+div.table table tfoot td { background-color: #FFF; color: #000; padding: 3px; }
+
+div.form { -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); margin: 0 10px; background-color: #FFF; }
+div.form div.header { background-color: #000; padding: 10px; }
+div.form div.header p { color: #FFF; margin: 0 0 20px; margin: 0; }
+div.form div.header h2 { color: #ffb001; font-size: 28px; line-height: 42px; margin: 0; }
+div.form div.body { padding: 10px; }
+div.form div.buttons { background-color: #DDD; border-top: 1px solid #CCC; padding: 10px; text-align: right; }
+div.form input[type="text"], div.form input[type="email"], div.form input[type="tel"], div.form input[type="password"] { border: 1px solid #CCC; background-color: #EEE; padding: 10px; width: 418px; }
+div.form input[type="submit"] { background: url(/images/button.gif); color: #DDD; font-weight: bold; padding: 10px 20px; font-size: 13px; line-height: 16px; display: block-inline; border: none; cursor: pointer; margin: 0 0 0 10px; }
+div.form dd { margin: 0 0 20px; }
+div.form dt label { font-weight: bold; cursor: pointer; }
+div.form dt label.required { background: url(../images/required.png) no-repeat right 0; padding: 0 15px 0 0; }
+div.form div.error_description { background: #D94316; color: #FFF; padding: 2px 5px; margin: 0 0 10px; font-size: 11px; }
+div.form div.field_with_errors { display: inline; }
+div.form div.field_with_errors label { color: #900; }
+div.form div.field_with_errors select, div.form div.field_with_errors textarea, div.form div.field_with_errors input { border: 1px solid #D94316 !important; background-color: #FEE !important; }
+
+div.frame { background-color: #FFF; padding: 10px; -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); }
+div.frame img { display: block; margin: 0 0 10px; }
+div.frame h3 { text-align: center; font-weight: bold; font-size: 12px; line-height: 20px; }
+
+div.signin { background-color: #000; position: fixed; top: 0; width: 100%; z-index: 99; }
+div.signin div.inner { padding: 5px 0; text-align: right; }
+div.signin a { color: #ffb001; }
+div.signin ul { float: left; overflow: hidden; margin: 0 0 0 10px; }
+div.signin li { float: left; margin: 0; }
+div.signin li a { display: block; padding: 3px 10px; }
+div.signin li a:hover { background-color: #ffb001; color: #FFF; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; }
+div.signin p { float: right; margin: 0 10px; color: #FFF; font-size: 13px; }
+div.signin p a:hover { text-decoration: underline; }
+
+div.first { background-color: #ffb001; }
+div.first div.inner { padding: 90px 0 50px; }
+div.first div.left div.frame { width: 440px; margin: 0 10px 10px; }
+div.first div.left h3.intro { color: #FFF; font-size: 14px; line-height: 28px; margin: 10px; font-weight: normal; }
+div.first div.right div.frame { width: 200px; margin: 0 10px 20px; float: left; }
+
+div.second { background-color: #333; }
+div.second tbody th { width: 44%; }
+div.second tbody td { width: 14%; }
+
+div.third { background-color: #D94316; }
+div.third tbody th { width: 30%; }
+div.third tbody td { width: 20%; }
+
+div.fourth { background-color: #333; }
+
+div.fifth { background-color: #D94316; }
+div.fifth a { font-weight: bold; color: #FFF; }
+div.fifth a:hover { text-decoration: underline; }
+div.fifth div.right { width: 460px; }
+
+div.sixth { background-color: #333; }
+div.sixth div.frame { width: 440px; }
+div.sixth img { margin: 0; }
+
+div#signup div.inner { padding: 50px 0; }
+div#signup div.table { border: none; box-shadow: none; margin: 0 0 20px; }
+div#signup thead th { border: 1px solid #AAA; background: #BBB; text-align: left; font-weight: normal; }
+div#signup thead td { border-top: 1px solid #AAA; border-right: 1px solid #AAA; }
+div#signup tfoot th { border: 1px solid #AAA; background: #BBB; }
+div#signup tfoot td { border-bottom: 1px solid #AAA; border-right: 1px solid #AAA; }
+
+div#map { display: block; width: 440px; height: 280px; background-color: #333; }
+
+div.thankyou { background-color: #ffb001; }
+div.thankyou div.inner { padding: 90px 0 50px; }
+div.thankyou div.frame { width: 440px; }
+div.thankyou h1 { margin: -10px -10px 20px; padding: 20px 10px; background-color: #000; color: #ffb001; }
+div.thankyou p { color: #444; margin: 0; }
+div.thankyou p.greeting { padding: 0 0 0 260px; margin: 30px 0; }
+
+div.terms { overflow-y: scroll; height: 500px; margin: -20px -10px 0; padding: 10px; }
+div.terms ul { margin: 0 0 20px; }
+div.terms li { font-size: 12px; line-height: 20px; margin: 0 0 5px 20px; list-style: disc; }
+div.terms p { font-size: 12px; line-height: 20px; margin: 0 0 20px; }
+
+div.footer div.inner { padding: 10px 0; }
+div.footer p { font-size: 11px; padding: 0 0 0 35px; background: url(../images/thinktopography.jpg) no-repeat 0 0; line-height: 30px; display: inline; padding: 8px 0 8px 35px; }
+div.footer a { color: #ffb001; }
+div.footer div.byline { text-align: center; }

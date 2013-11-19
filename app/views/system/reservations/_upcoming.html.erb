@@ -1,0 +1,36 @@
+<div class="schedule-body" data-url="<%= upcoming_reservations_url %>">
+  <div class="title">
+  	<select class="member">
+      <option value="<%= upcoming_reservations_url(:user_id => current_user.id) %>"<%= (current_user.id == params[:user_id].to_i) ? ' selected="selected"' : '' %>><%= current_user.full_name %></option>
+  		<option>---------------</option>
+      <% User.where("id != ?", current_user.id).find(:all).each do |user| %>
+        <option value="<%= upcoming_reservations_url(:user_id => user.id) %>"<%= (user.id == params[:user_id].to_i) ? ' selected="selected"' : '' %>><%= user.full_name %></option>
+      <% end %>
+  	</select>
+  </div>
+	<div class="schedule-list">
+		<ul>
+			<% current = '' %>
+			<% unless @reservations.empty? %>
+				<% @reservations.each do |reservation| %>
+				  <% day = reservation.start.strftime('%A, %B %d') %>
+				  <% unless day == current %>
+	          <li class="day"><%= day %></day>
+					<% end%>
+	  			<li>
+	  				<strong><%= reservation.resource.name %></strong><br />
+	          <%= reservation.start.strftime("%l:%M%p") %> to
+	          <%= reservation.end.strftime("%l:%M%p") %><br />
+		        <% if reservation.user_id == current_user.id && reservation.start > Time.now.in(30.minutes).getutc %>
+	            <%= link_to 'Cancel Reservation', cancel_reservation_url(reservation), :class => 'cancel' %>
+						<% end %>
+					</li>
+	        <% current = day %>
+				<% end %>
+      <% else %>
+			  <li>This member has no pending reservations</li>
+      <% end %>
+		</ul>
+		
+	</div>
+</div>

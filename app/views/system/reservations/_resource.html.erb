@@ -1,0 +1,61 @@
+<% height = 6 %>
+<% hourheight = (height * 4) + 3 %>
+<div class="schedule-body" data-resource="<%= @resource.id %>" data-url="<%= resource_reservations_url(:date => params[:date], :resource_id => params[:resource_id]) %>">
+	<div class="title">
+		<select class="resource">
+			<% Resource.find(:all).each do |resource| %>
+			  <option value="<%= resource_reservations_url(:resource_id => resource.id, :date => params[:date]) %>"<%= (resource.id == params[:resource_id].to_i) ? ' selected="selected"' : '' %>><%= resource.name %></option>
+			<% end %>
+		</select>
+	  DURING THE WEEK OF <strong><%= @start.strftime("%b %d").upcase %></strong>
+		- <strong><%= @finish.strftime("%b %d").upcase %></strong>
+		<div class="pager">
+	    <%= link_to 'PREV WEEK', resource_reservations_url(:resource_id => params[:resource_id], :date => @prev), :class => 'previous' %>
+      <%= link_to 'THIS WEEK', resource_reservations_url(:resource_id => params[:resource_id], :date => Date.today.strftime("%Y-%m-%d")), :class => 'today' %>
+	    <%= link_to 'NEXT WEEK', resource_reservations_url(:resource_id => params[:resource_id], :date => @next), :class => 'next' %>
+		</div>
+	</div>
+  <div class="column" style="width: 60px">
+    <div class="column-header"></div>
+  </div>
+  <% day = @start %>
+  <% 7.times do |i| %>
+    <div class="column <%= (i < 4) ? 'right' : 'left' %>" style="width: 100px">
+      <div class="column-header">
+        <%= raw(day.strftime("%a<br />%b %d").upcase) %>
+      </div>
+    </div>
+    <% day = day.in(1.day) %>
+	<% end %>
+	<div class="schedule-grid schedule-resource">
+    <% if Date.today >= @start.to_date && Date.today <= @finish.to_date %>
+      <% hour = Time.now.strftime("%H").to_i - 7 %>
+      <% min = Time.now.strftime("%M").to_i / 15 %>
+      <div class="now" style="top:<%= (hour * 4 + min) * 7 + 30 %>px;width:700px;left:60px;"></div>
+    <% end %>
+		<div class="column" style="width: 60px">
+		  <% (7..22).each do |hour| %>
+		    <div class="hour" style="height:<%= hourheight %>px">
+		      <%= (hour > 12) ? hour - 12 : hour %><%= (hour > 11) ? 'PM' : 'AM' %>
+		    </div>
+		  <% end %>
+		</div>
+    <% day = @start %>
+		<% 7.times do |i| %>
+		  <div class="column <%= (i < 4) ? 'right' : 'left' %>" style="width: 100px" data-date="<%= day.strftime("%Y-%m-%d") %>">
+		    <div class="column-body">
+		    	<% weekend = (i == 0 || i == 6) ? true : false %>
+	        <%= render 'grid', :height => height, :weekend => weekend %>
+		      <% unless @reservations[i].nil? %>
+		        <% @reservations[i].each do |j,reservation| %>
+							<% itemheight = (height + 1) * reservation.length_in_units - 1 %>
+							<% top = (height * (j - 1)) + j - 1 %>
+		          <%= render reservation.class.name.downcase, :reservation => reservation, :itemheight => itemheight, :top => top %>
+		        <% end %>
+		      <% end %>
+		    </div>
+		  </div>
+		  <% day = day.in(1.day) %>
+		<% end %>
+	</div>
+</div>

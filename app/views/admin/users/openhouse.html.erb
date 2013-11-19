@@ -1,0 +1,34 @@
+<% content_for :main do %>
+
+  <div class="form">
+    
+    <div class="header">
+      <h2>Open House Thank You</h2>
+    </div>
+  
+    <% form_tag openhouse_admin_users_url, { :multipart => true } do %>
+    
+      <div class="body">
+        
+        <dl>
+        
+          <dt><label>CSV File</label></dt>
+          <dd><%= file_field_tag 'upload[file]' %></dd>
+        
+        </dl>        
+
+      </div>
+    
+      <div class="buttons">
+    
+        <ul>
+          <li><%= submit_tag "Upload", { :class => "button" } %></li>
+        </ul>
+        
+      </div>
+    
+    <% end %>
+    
+  </div>
+  
+<% end %>

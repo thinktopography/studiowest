@@ -1,0 +1,61 @@
+<% content_for :main do %>
+
+  <div class="form">
+  	
+		<div class="header">
+			<h2>Company Information</h2>
+			<p>This information below will be displayed on the Studio West members page <%= link_to "http://studiowest.com/members", "http://studiowest.com/members"%></p>
+		</div>
+    
+    <% form_for @company, :url => company_settings_url, :html => { :multipart => true } do |f| %>
+    
+      <div class="body">
+  
+        <dl>
+          
+          <dd>
+            <div class="enabled">
+              <%= f.check_box :is_enabled %>
+              <%= f.label :is_enabled, 'Display this information on the public members page' %>
+            </div>
+          </dd>
+
+          <%= f.text_field_control @company, :name, { :text => 'Name', :class => 'required' } %>
+        
+          <dt><%= f.label :logo %></dt>
+          <dd>
+            <div class="logo">
+              <%= image_tag @company.logo_url(:medium), :size => '48x48' %>
+              <div class="details">
+                <%= (@company.logo_file_name.nil?) ? @company.logo_file_name : raw('&nbsp;') %><br />
+                <%= f.file_field :avatar %>
+              </div>
+            </div>
+          </dd>
+
+          <%= f.text_area_control @company, :description, { :text => 'Description' }, { :rows => 3 } %>
+
+          <%= f.email_field_control @company, :email, { :text => 'Email' } %>
+
+          <%= f.url_field_control @company, :website, { :text => 'Website' } %>
+
+          <%= f.url_field_control @company, :facebook, { :text => 'Facebook' } %>
+
+          <%= f.url_field_control @company, :twitter, { :text => 'Twitter' } %>
+				
+				</dl>
+
+      </div>
+    
+      <div class="buttons">
+    
+        <%= link_to 'Cancel', reservations_url %> or 
+        <%= f.submit "Update", { :class => "button" } %>
+        
+      </div>
+    
+    <% end %>
+  
+  </div>
+
+<% end %>

@@ -1,0 +1,31 @@
+<% params[:tab] = 'day' %>
+
+<% content_for :main do -%>
+
+  <div class="panel">
+
+    <div class="tabs">
+      <ul>
+        <li><%= link_to 'By Day', day_reservations_url, :class => 'day'+((params[:tab] == 'day') ? ' selected' : '') %></li>
+        <li><%= link_to 'By Resource', resource_reservations_url, :class => 'resource'+((params[:tab] == 'resource') ? ' selected' : '') %></li>
+        <li><%= link_to 'Upcoming', upcoming_reservations_url, :class => 'upcoming'+((params[:tab] == 'upcoming') ? ' selected' : '') %></li>
+      </ul>
+    </div>
+    
+    <div class="schedule">
+      <%= render params[:tab] %>
+			<div class="legend">
+				<ul>
+          <li><span class="event">&nbsp;</span> Public Events</li>
+          <li><span class="yours">&nbsp;</span> Your Reservations</li>
+          <li><span class="others">&nbsp;</span> Other's Reservations</li>
+				</ul>
+        <span class="floorplan-show">Map of studio and resources</span>
+			</div>
+  	</div>
+		
+  </div>
+	
+	<%= render 'new' %>
+
+<% end %>

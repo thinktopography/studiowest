@@ -1,0 +1,32 @@
+one:
+  id: 1
+  user_id: 1
+  membership_id: 1
+  resource_id: 1
+  start: "<%= Date.today %> 15:00:00"
+  end: "<%= Date.today %> 16:00:00"
+  credits: 1.00
+two:
+  id: 2
+  user_id: 2
+  membership_id: 2
+  resource_id: 1
+  start: "<%= Date.today %> 15:00:00"
+  end: "<%= Date.today %> 17:30:00"
+  credits: 1.50
+three:
+  id: 3
+  user_id: 1
+  membership_id: 1
+  resource_id: 1
+  start: "<%= Date.today %> 18:00:00"
+  end: "<%= Date.today %> 19:15:00"
+  credits: 1.25
+four:
+  id: 4
+  user_id: 3
+  membership_id: 3
+  resource_id: 1
+  start: "<%= Date.today %> 22:30:00"
+  end: "<%= Date.today %> 23:30:00"
+  credits: 0.75

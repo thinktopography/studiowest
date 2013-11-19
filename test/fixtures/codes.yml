@@ -1,0 +1,57 @@
+one:
+  id: 1
+  number: 4796
+two:
+  id: 2
+  number: 2914
+three:
+  id: 3
+  number: 7366
+four:
+  id: 4
+  number: 2081
+five:
+  id: 5
+  number: 0693
+six:
+  id: 6
+  number: 1752
+seven:
+  id: 7
+  number: 4414
+eight:
+  id: 8
+  number: 5850
+nine:
+  id: 9
+  number: 7737
+ten:
+  id: 10
+  number: 9264
+eleven:
+  id: 11
+  number: 2803
+twelve:
+  id: 12
+  number: 0378
+thirteen:
+  id: 13
+  number: 3192
+fourteen:
+  id: 14
+  number: 6649
+fifteen:
+  id: 15
+  number: 1762
+sixteen:
+  id: 16
+  number: 5458
+seventeen:
+  id: 17
+  number: 3286
+eighteen:
+  id: 18
+  number: 1198
+nineteen:
+  id: 19
+  number: 3299

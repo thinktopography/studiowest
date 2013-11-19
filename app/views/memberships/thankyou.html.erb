@@ -1,0 +1,16 @@
+<% content_for :main do -%>
+<div class="thankyou">
+  <div class="inner">
+    <div class="center">
+    	<div class="frame">
+        <h1>Thank You, <%= @user.first_name %>!</h1>
+				<p>We're so excited to have you as a coworker!  We'll be in touch within 48 hours with your login information so you can begin making reservations!</p>
+				<p class="greeting">Sincerely,<br />
+				Danielle, Greg, & Scott</p>
+				<p class="back">&laquo; <%= link_to "Back to signup", new_membership_url %></p>
+    	</div>
+    </div>
+  </div>
+</div>
+
+<% end %>

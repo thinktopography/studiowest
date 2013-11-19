@@ -1,0 +1,158 @@
+body { background-color: #000; }
+div.inner {
+  margin: 0 auto; width: 960px; padding: 50px 0; overflow: hidden;
+  div.left { float: left; width: 480px; }
+  div.right { float: right; width: 480px; }
+  div.center { margin: 0 auto; width: 480px; }
+  h2 { margin: 0 10px 10px; color: #FFF; }
+  p { margin: 0 10px; color: #EEE; font-size: 14px; line-height: 30px; }
+}
+div.table {
+  border: 10px solid #FFF; -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25); -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25); margin: 0 10px; background-color: #FFF;
+  h2 { background-color: #000; color: #FFF; font-size: 12px; padding: 3px; text-align: center; margin: 0 0 10px; }
+  span.footnote { color: #F00; font-weight: bold; }
+  table {
+    border-collapse: collapse; width: 440px;
+    thead {
+      th, td { padding: 5px 3px; border-top: 1x solid #FFF; border-right: 1x solid #FFF; }
+      td {
+        background-color: #FFF; text-align: center; vertical-align: bottom; color: #666;border-bottom: 1px solid #AAA;
+        strong { color: #000; }
+      }
+    }
+    tbody {
+      td, th { border-right: 1px solid #AAA; border-bottom: 1px solid #AAA; font-size: 11px; }
+      th, td { padding: 3px; }
+      th { border-left: 1px solid #AAA; text-align: left;  }
+      td { text-align: center; color: #666; }
+      tr.odd td, tr.odd th { background-color: #EEE; }
+      tr.even td, tr.even th { background-color: #FFF; }
+      td.no { color: #900; }
+      td.yes { color: #090; }
+      strong { color: #e5592e; }
+      td .strike { text-decoration: line-through; }
+    }
+    tfoot {
+      td { background-color: #FFF; color: #000; padding: 3px; }
+    }
+  }
+}
+div.form {
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25); -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25); margin: 0 10px; background-color: #FFF;
+  div.header {
+    background-color: #000; padding: 10px;
+    p { color: #FFF; margin: 0 0 20px; margin: 0; }
+    h2 { color: #ffb001; font-size: 28px; line-height: 42px;margin: 0; }
+  }
+  div.body { padding: 10px; }
+  div.buttons { background-color: #DDD; border-top: 1px solid #CCC; padding: 10px; text-align: right; }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"] { border: 1px solid #CCC; background-color: #EEE; padding: 10px; width: 418px; }
+  input[type="submit"] { background: url(/images/button.gif); color: #DDD; font-weight: bold; padding: 10px 20px; font-size: 13px; line-height: 16px; display: block-inline; border: none; cursor: pointer; margin: 0 0 0 10px; }
+  dd { margin: 0 0 20px; }
+  dt label {
+    font-weight: bold; cursor: pointer;
+    &.required { background: url(../images/required.png) no-repeat right 0; padding: 0 15px 0 0; }
+  }
+  div.error_description { background: #D94316; color: #FFF; padding: 2px 5px; margin: 0 0 10px; font-size: 11px; }
+  div.field_with_errors {
+    display: inline;
+    label { color: #900; }
+    select, textarea, input { border: 1px solid #D94316 !important; background-color: #FEE !important; }
+  }
+}
+div.frame {
+  background-color: #FFF; padding: 10px; -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25); -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  img { display: block; margin: 0 0 10px; }
+  h3 { text-align: center; font-weight: bold; font-size: 12px; line-height: 20px; }
+}
+
+div.signin {
+  background-color: #000; position: fixed; top: 0; width: 100%; z-index: 99;
+  div.inner { padding: 5px 0; text-align: right; }
+  a { color: #ffb001; }
+  ul { float: left; overflow: hidden; margin: 0 0 0 10px; }
+  li { float: left; margin: 0; }
+  li a { display: block; padding: 3px 10px; }
+  li a:hover { background-color: #ffb001; color: #FFF; @include rounded(5px, 5px, 5px, 5px); }
+  p { float: right; margin: 0 10px; color: #FFF; font-size: 13px; }
+  p a:hover { text-decoration: underline; }
+}
+
+div.first {
+  background-color: #ffb001;
+  div.inner { padding: 90px 0 50px; }
+  div.left {
+    div.frame { width: 440px; margin: 0 10px 10px; }
+    h3.intro { color: #FFF; font-size: 14px; line-height: 28px; margin: 10px; font-weight: normal; }
+  }
+  div.right {
+    div.frame {
+      width: 200px; margin: 0 10px 20px; float: left;
+    }
+  }
+}
+div.second {
+  background-color: #333;
+  tbody {
+    th { width: 44%; }
+    td { width: 14%; }
+  }
+
+}
+div.third {
+  background-color: #D94316;
+  tbody {
+    th { width: 30%; }
+    td { width: 20%; }
+  }
+}
+div.fourth {
+  background-color: #333;
+}
+div.fifth {
+  background-color: #D94316;
+  a { font-weight: bold; color: #FFF; }
+  a:hover { text-decoration: underline; }
+  div.right { width: 460px; }
+}
+div.sixth {
+  background-color: #333;
+  div.frame { width: 440px; }
+  img { margin: 0; }
+}
+div#signup {
+  div.inner { padding: 50px 0; }
+  div.table { border: none; box-shadow: none; margin: 0 0 20px; }
+  thead {
+    th { border: 1px solid #AAA; background: #BBB; text-align: left; font-weight: normal; }
+    td { border-top: 1px solid #AAA; border-right: 1px solid #AAA; }
+  }
+  tfoot {
+    th { border: 1px solid #AAA; background: #BBB; }
+    td { border-bottom: 1px solid #AAA; border-right: 1px solid #AAA; }
+  }
+}
+div#map { display: block; width: 440px; height: 280px; background-color: #333; }
+div.thankyou {
+  background-color: #ffb001;
+  div.inner { padding: 90px 0 50px; }
+  div.frame { width: 440px; }
+  h1 { margin: -10px -10px 20px; padding: 20px 10px; background-color: #000; color: #ffb001; }
+  p { color: #444; margin: 0; }
+  p.greeting { padding: 0 0 0 260px; margin: 30px 0; }
+}
+div.terms {
+  overflow-y: scroll; height: 500px; margin: -20px -10px 0; padding: 10px;
+  ul { margin: 0 0 20px; }
+  li { font-size: 12px; line-height: 20px; margin: 0 0 5px 20px; list-style: disc; }
+  p { font-size: 12px; line-height: 20px; margin: 0 0 20px; }
+}
+div.footer {
+  div.inner { padding: 10px 0; }
+  p { font-size: 11px; padding: 0 0 0 35px; background: url(../images/thinktopography.jpg) no-repeat 0 0; line-height: 30px; display: inline; padding: 8px 0 8px 35px; }
+  a { color: #ffb001; }
+  div.byline { text-align: center; }
+}

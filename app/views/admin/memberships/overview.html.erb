@@ -1,0 +1,29 @@
+<% content_for :main do %>
+
+  <table border="0" cellspacing="0" cellpadding="0">
+  	<tr>
+      <th>Plan</th>
+  		<th>Members</th>
+      <th>Credits</th>
+      <th>Total Hours</th>
+  	</tr>
+		<% total = 0 %>
+		<%= @plans.each do |plan| %>
+		  <% members = plan.memberships.where(:start => Date.today.beginning_of_month).count%>
+			<% credit_hours = members * plan.credits %>
+			<% total += credit_hours %>
+			<tr>
+	      <th><%= plan.name %></th>
+	      <td><%= members %></td>
+	      <td><%= plan.credits %></td>
+        <td><%= credit_hours %></td>
+	    </tr>
+		<% end %>
+		<tr>
+			<th colspan="3">&nbsp;</th>
+			<td><%= total %>/6500</td>
+		</tr>
+		
+	</table>
+
+<% end %>

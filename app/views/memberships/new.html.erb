@@ -1,0 +1,130 @@
+<% content_for :main do %>
+
+<div class="first" id="signup">
+  <div class="inner">
+    <div class="center">
+      <div class="form">
+		    <% form_for @user, :url => memberships_url do |f| %>
+		
+			    <div class="header">
+			      <h2>Signup</h2>
+			      <p>Please enter your information below to create your membership</p>
+			    </div>
+			    
+		      <div class="body">
+		  
+		        <dl>
+		          
+		          <%= f.text_field_control @user, :first_name, { :text => 'First Name', :class => 'required' } %>
+		        
+		          <%= f.text_field_control @user, :last_name, { :text => 'Last Name', :class => 'required' } %>
+							
+							<dt><%= label :company, :name, 'Company', :class => 'required' %></dt>
+							<dd>
+								<%= text_field :company, :name %>
+					      <% unless @company.errors[:name].empty? %>
+					        <div class="error_description"><%= @company.errors[:name].first %></div>
+					      <% end %>
+						  </dd>
+		
+		          <%= f.email_field_control @user, :email, { :text => 'Email', :class => 'required' } %>
+							
+              <%= f.phone_field_control @user, :phone, { :text => 'Phone', :class => 'required' } %>
+
+							<dt><label class="required">Choose a Coworking Plan</label></dt>
+							
+					     <div class="table">
+				        <table cellpadding="0" cellspacing="0">
+				          <thead>
+				            <tr>
+				              <th>&nbsp;</th>
+				              <td><%= image_tag "quartertime.png", :size => '30x30' %><br /><strong>1/4 Time</strong></td>
+				              <td><%= image_tag "halftime.png", :size => '30x30' %><br /><strong>1/2 Time</strong></td>
+				              <td><%= image_tag "threequarterstime.png", :size => '30x30' %><br /><strong>3/4 Time</strong></td>
+				              <td><%= image_tag "fulltime.png", :size => '30x30' %><br /><strong>Full Time</strong></td>
+				            </tr>
+				          </thead>
+				          <tbody>
+				            <tr class="odd">
+				              <th>Monthly Price</th>
+				              <td><strong>$150</strong></td>
+				              <td><strong>$210</strong></td>
+				              <td><strong>$270</strong></td>
+				              <td><strong>$330</strong></td>
+				            </tr>
+				            <tr class="even">
+				              <th>Coworking Credits</th>
+				              <td>40</td>
+				              <td>80</td>
+				              <td>120</td>
+				              <td>160</td>
+				            </tr>
+				            <tr class="odd">
+				              <th>Average Hours/Week</th>
+				              <td>10</td>
+				              <td>20</td>
+				              <td>30</td>
+				              <td>40</td>
+				            </tr>
+				            <tr class="even">
+				              <th>10% Off SEEN Membership</th>
+				              <td class="yes">YES</td>
+				              <td class="yes">YES</td>
+				              <td class="yes">YES</td>
+				              <td class="yes">YES</td>
+				            </tr>
+				            <tr class="odd">
+				              <th>Event Rental</th>
+				              <td class="no">NO</td>
+				              <td class="yes">YES</td>
+				              <td class="yes">YES</td>
+				              <td class="yes">YES</td>
+				            </tr>
+				            <tr class="even">
+				              <th>Signage</th>
+				              <td class="no">NO</td>
+				              <td class="no">NO</td>
+				              <td class="yes">YES</td>
+				              <td class="yes">YES</td>
+				            </tr>
+				            <tr class="odd">
+				              <th>Mailing Address</th>
+				              <td class="no">NO</td>
+				              <td class="no">NO</td>
+				              <td class="no">NO</td>
+				              <td class="yes">YES</td>
+				            </tr>
+				          </tbody>
+									<tfoot>
+										<tr>
+											<th>&nbsp;</th>
+				              <td align="center"><%= radio_button :membership, :plan_id, 1 %></td>
+				              <td align="center"><%= radio_button :membership, :plan_id, 2 %></td>
+				              <td align="center"><%= radio_button :membership, :plan_id, 3 %></td>
+				              <td align="center"><%= radio_button :membership, :plan_id, 4 %></td>
+										</tr>
+									</tfoot>
+				        </table>
+				      </div>
+							
+							<dt><%= label :membership, :until, 'Membership Through', :class => 'required' %></dt>
+							<dd><%= text_field :membership, :until, :class => 'datepicker', :autocomplete => 'off' %></dd>
+		        
+		        </dl>
+		
+		      </div>
+		    
+		      <div class="buttons">
+		    
+		        <%= link_to 'Cancel', new_membership_url %> or 
+		        <%= f.submit "Create Membership", { :class => "button" } %>
+		        
+		      </div>
+		    
+		    <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% end %>

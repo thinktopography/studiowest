@@ -1,0 +1,29 @@
+<% content_for :main do %>
+
+<div class="thankyou">
+  <div class="inner">
+    <div class="center">
+    	<div class="form">
+        <%= form_for(resource, :as => resource_name, :url => user_session_path) do |f| %>
+          <div class="header">
+            <h2>Sign in</h2>
+          </div>
+					<div class="body">
+						<dl>
+	            <dt><%= f.label :email %></dt>
+	            <dd><%= f.email_field :email %></dd>
+							<dt><%= f.label :password %></dt>
+							<dd><%= f.password_field :password %></dd>
+							<dd><%= f.check_box :remember_me %> <%= f.label :remember_me %></dd>
+						</dl>
+          </div>
+          <div class="buttons">
+            <%= f.submit "Sign in" %>
+          </div>
+        <% end %>
+    	</div>
+    </div>
+  </div>
+</div>
+  
+<% end %>

@@ -1,0 +1,50 @@
+<% content_for :main do %>
+
+  <div class="form">
+  	
+		<div class="header">
+			<h2>Settings</h2>
+			<p>Help us personalize your reservations</p>
+		</div>
+    
+    <% form_for @user, :url => settings_url, :html => { :multipart => true } do |f| %>
+    
+      <div class="body">
+  
+        <dl>
+          
+          <%= f.text_field_control @user, :first_name, { :text => 'First Name', :class => 'required' } %>
+        
+          <%= f.text_field_control @user, :last_name, { :text => 'Last Name', :class => 'required' } %>
+
+          <%= f.email_field_control @user, :email, { :text => 'Email', :class => 'required' } %>
+          
+          <%= f.phone_field_control @user, :phone, { :text => 'Phone', :class => 'required' } %>
+          
+				  <dt><%= f.label :thumbnail %></dt>
+				  <dd>
+				  	<div class="thumbnail">
+              <%= image_tag @user.avatar_url(:medium), :size => '48x48' %>
+							<div class="details">
+                <%= (@user.avatar_file_name.nil?) ? @user.avatar_file_name : raw('&nbsp;') %><br />
+                <%= f.file_field :avatar %>
+						  </div>
+				  	</div>
+				  </dd>
+				
+				</dl>
+
+      </div>
+    
+      <div class="buttons">
+    
+        <%= link_to 'Cancel', reservations_url %> or 
+        <%= f.submit "Update", { :class => "button" } %>
+        
+      </div>
+    
+    <% end %>
+  
+  </div>
+
+<% end %>

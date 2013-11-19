@@ -1,0 +1,22 @@
+<div class="reservation <%= (reservation.user_id == current_user.id) ? 'yours' : 'others' %>" style="height:<%= itemheight %>px;top:<%= top %>px;" id="reservation-<%= reservation.id %>">
+  <div class="popup">
+    <div class="popup-quote">&nbsp;</div>
+    <div class="popup-details">
+      <%= image_tag reservation.user.avatar_url(:medium), :size => '48x48' %>
+			<div class="popup-content">
+        <h2><%= reservation.user.full_name %></h2>
+        <p class="time">  
+          <%= reservation.start.strftime('%a, %b %d') %>,
+          <%= reservation.start.strftime("%l:%M%p") %> to
+          <%= reservation.end.strftime("%l:%M%p") %></p>
+			  <% if reservation.user_id == current_user.id %>
+          <p><%= pluralize(reservation.credits, 'credit', 'credits') %></p>
+				<% end %>
+				<% if reservation.user_id == current_user.id && reservation.start > Date.today.beginning_of_day.getutc %>
+          <p><%= link_to 'Cancel Reservation', cancel_reservation_url(reservation), :class => 'cancel' %></p>
+			  <% end %>
+        <span class="close">x</span>
+			</div>
+    </div>
+  </div>              
+</div>

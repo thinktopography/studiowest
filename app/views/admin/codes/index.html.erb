@@ -1,0 +1,9 @@
+<% content_for :main do -%>
+
+  <div style="background-color: #FFF; padding:10px;">
+    <% @codes.each do |code| %>
+      <strong><%= code.id %>)</strong> <%= code.number %><br />
+    <% end %> 
+	</div>
+
+<% end %>
