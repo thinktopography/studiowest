@@ -39,7 +39,7 @@ class Reservation < ActiveRecord::Base
   end
   
   def start_in_units
-    (self.start.strftime("%k").to_i - 7) * 4 + (self.start.strftime("%M").to_i / 15) + 1
+    (self.start.in_time_zone.strftime("%k").to_i - 7) * 4 + (self.start.strftime("%M").to_i / 15) + 1
   end
     
   def length_in_units

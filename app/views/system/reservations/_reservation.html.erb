@@ -6,9 +6,9 @@
 			<div class="popup-content">
         <h2><%= reservation.user.full_name %></h2>
         <p class="time">  
-          <%= reservation.start.strftime('%a, %b %d') %>,
-          <%= reservation.start.strftime("%l:%M%p") %> to
-          <%= reservation.end.strftime("%l:%M%p") %></p>
+          <%= reservation.start.in_time_zone.strftime('%a, %b %d') %>,
+          <%= reservation.start.in_time_zone.strftime("%l:%M%p") %> to
+          <%= reservation.end.in_time_zone.strftime("%l:%M%p") %></p>
 			  <% if reservation.user_id == current_user.id %>
           <p><%= pluralize(reservation.credits, 'credit', 'credits') %></p>
 				<% end %>
