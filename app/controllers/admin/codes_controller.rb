@@ -1,7 +1,7 @@
-class Admin::CodesController < Admin::ApplicationController
+class Admin::CodesController < ApplicationController
   
   def index
-    @codes = Code.find(:all)
+    @users=User.joins('INNER JOIN codes ON (codes.id = users.code_id)')
   end
   
 end

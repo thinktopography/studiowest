@@ -38,15 +38,6 @@ div.navbar div.presence ul { display: none; position: absolute; top: 37px; right
 div.navbar div.presence ul a { display: block; padding: 5px; color: #fff; width: 150px; }
 div.navbar div.presence ul a:hover { background-color: #EEE; color: #333; }
 
-body { background-color: #000; }
-
-div.inner { margin: 0 auto; width: 960px; padding: 50px 0; overflow: hidden; }
-div.inner div.left { float: left; width: 480px; }
-div.inner div.right { float: right; width: 480px; }
-div.inner div.center { margin: 0 auto; width: 480px; }
-div.inner h2 { margin: 0 10px 10px; color: #FFF; }
-div.inner p { margin: 0 10px; color: #EEE; font-size: 14px; line-height: 30px; }
-
 div.table { border: 10px solid #FFF; -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); margin: 0 10px; background-color: #FFF; }
 div.table h2 { background-color: #000; color: #FFF; font-size: 12px; padding: 3px; text-align: center; margin: 0 0 10px; }
 div.table span.footnote { color: #F00; font-weight: bold; }
@@ -65,6 +56,15 @@ div.table table tbody td.yes { color: #090; }
 div.table table tbody strong { color: #e5592e; }
 div.table table tbody td .strike { text-decoration: line-through; }
 div.table table tfoot td { background-color: #FFF; color: #000; padding: 3px; }
+
+body { background-color: #000; }
+
+div.inner { margin: 0 auto; width: 960px; padding: 50px 0; overflow: hidden; }
+div.inner div.left { float: left; width: 480px; }
+div.inner div.right { float: right; width: 480px; }
+div.inner div.center { margin: 0 auto; width: 480px; }
+div.inner h2 { margin: 0 10px 10px; color: #FFF; }
+div.inner p { margin: 0 10px; color: #EEE; font-size: 14px; line-height: 30px; }
 
 div.form { -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); margin: 0 10px; background-color: #FFF; }
 div.form div.header { background-color: #000; padding: 10px; }

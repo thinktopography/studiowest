@@ -1,9 +1,24 @@
 <% content_for :main do -%>
 
   <div style="background-color: #FFF; padding:10px;">
-    <% @codes.each do |code| %>
-      <strong><%= code.id %>)</strong> <%= code.number %><br />
-    <% end %> 
-	</div>
+    <div class="table">
+      <table cellpadding="0" cellspacing="0" width="400">
+        <thead>
+          <tr>
+            <td>USER</td>
+            <td>CODE</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr class="<%= cycle('odd','even') %>">
+              <th><%= user.full_name %></th>
+              <td><%= user.code.printer %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
 <% end %>
