@@ -19,11 +19,10 @@ class Admin::UsersController < Admin::ApplicationController
   end
   
   def renew
-    @user = User.find 1
-    Notifications.renew(@user).deliver
     output = ""
      @users = User.joins('INNER JOIN codes ON codes.id=users.code_id')
      @users.each do |user|
+       Notifications.renew(user).deliver
        output += "#{user.full_name}<br />"
      end
     render :text => output
