@@ -1,0 +1,89 @@
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td bgcolor="#FFB001" align="center">
+      <table border="0" cellspacing="0" cellpadding="10" width="480">
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <table border="0" cellspacing="0" cellpadding="10" width="460" bgcolor="#FFF">
+              <tr>
+                <td bgcolor="#FFFFFF">
+                  <img src="http://studiowestithaca.com/images/studiowest.jpg" width="440" height="290" alt="Studio West, 516 West MLK" title="Studio West, 516 West MLK" />
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#FFFFFF">
+                  <h1 style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:20px;line-height:28px;">Happy Holidays and Membership Update</h1>
+                  <p style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:12px;line-height:26px;color:#444444;">Happy Holidays <%= @user.first_name %>,</p>
+                  <p style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:12px;line-height:26px;color:#444444;">Thank you for your membership at Studio West in 2013! I'm happy to see you every time we are in the studio together and I'm looking forward to sharing the space with you again next year!</p>
+                  <p style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:12px;line-height:26px;color:#444444;">We're making changes to our membership policies in 2014 and I'd like to take this opportunity to tell you about some of them.</p>
+                  <table border="0" cellspacing="0" cellpadding="10" width="440">
+                    <tr bgcolor="#EEEEEE">
+                      <td style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:12px;line-height:22px;color:#444444;">
+                        <img src="http://studiowestithaca.com/images/247.jpg" width="150" alt="New Membership Model" title="New Membership Model" align="left" style="margin:0 10px 0 0;" />
+                        <h3 style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:14px;line-height:20px;margin:0; color:#000000">New Membership Model</h3>
+                        Starting on January 1, the studio is open to members 24 hours a day, 7 days a week. We reserve the right to host public events at the studio between the hours of 6PM - 12AM, however all events will be announced on the calendar at least two weeks in advance to give you sufficent notice so you can plan accordingly.
+                      </td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                      <td style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:12px;line-height:22px;color:#444444;">
+                        <img src="http://studiowestithaca.com/images/calendar.jpg" width="120" alt="Reservations with Google Calendar" title="Reservations with Google Calendar" align="left" style="margin:0 25px 0 15px;" />
+                        <h3 style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:14px;line-height:20px;margin:0; color:#000000">Reservations with Google Calendar</h3>
+                        We are discontinuing the credit reservation system in exchange for a shared Google Calendar. You will only need to place a reservation for the conference room or private office. When you need to reserve one of these resources, please enter it on the calender with the prefix <strong>CONF</strong> or <strong>PRIV</strong>, for example <strong>CONF: <%= @user.full_name %></strong>. Usage of these resources is still first come, first serve and we ask that you only use them for truly collaborative purposes.
+                      </td>
+                    </tr>
+                    <tr bgcolor="#EEEEEE">
+                      <td style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:12px;line-height:22px;color:#444444;">
+                        <img src="http://studiowestithaca.com/images/keypad.jpg" width="150" height="112" alt="New Door Codes" title="New Door Codes" align="left" style="margin:0 10px 10px 0;" />
+                        <h3 style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:14px;line-height:20px;margin:0; color:#000000">New Door Code</h3>
+                        For renewed studio security in the coming year, we have reprogrammed the keypad lock to the front door with new codes for all current members. As of this weekend, your new door code is <strong style="color:#990000"><%= @user.code.number %></strong>.
+                      </td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                      <td style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:12px;line-height:22px;color:#444444;">
+                        <img src="http://studiowestithaca.com/images/printer.jpg" width="150" height="150" alt="Wireless Printing" title="Wireless Printing" align="left" style="margin:0 10px 0 0;" />
+                        <h3 style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:14px;line-height:20px;margin:0; color:#000000">Wireless Printing</h3>
+                        We now offer onsite wireless printing as a membership benefit thanks to our newest member, <a href="http://www.linkedin.com/pub/miles-mcgrath/1/13b/b92">Miles McGrath</a>. Your membership now entitles you to print up to 50 black and white sheets a month. You will need to <a href="http://www.support.xerox.com/support/workcentre-7800-series/downloads/enus.html?operatingSystem=macosx107&fileLanguage=en&&associatedProduct=WorkCentre-78xx-built-in%20controller">download a driver</a> for your computer before you can get started. You will be asked for a 4-digit account code to confiugre this driver. Your code for printing is <strong style="color:#990000"><%= @user.code.printer %></strong>.
+                      </td>
+                    </tr>
+                    <tr bgcolor="#EEEEEE">
+                      <td style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:12px;line-height:22px;color:#444444;">
+                        <img src="http://studiowestithaca.com/images/rotary-phone.jpg" width="150" alt="Questions/Conerns?" title="Questions/Conerns?" align="left" style="margin:0 10px 0 0;" />
+                        <h3 style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:14px;line-height:20px;margin:0; color:#000000">Questions/Conerns</h3>
+                        As always, if you have any questions or concerns, please call me at 607-277-5647 or send me an email at <a href="mailto:greg@thinktopography.com">greg@thinktopography.com</a>.
+                      </td>
+                    </tr>
+									</table>
+                  <p style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:12px;line-height:26px;color:#444444;">Thank you again for your continued membership and I'm looking forward to seeing you in 2014 at Studio West!</p>
+                  <p style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:12px;line-height:20px;color:#444444;">Sincerely,<br />Greg Kops<br />----------------<br /><strong>Greg Kops</strong><br />Think Topography<br />Studio West<br />516 West State St<br />Ithaca, NY 14850<br />607-277-5647</p>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#000000">
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="28">
+                        <a href="https://www.facebook.com/studiowestithaca" target="_blank" title="Studio West on Facebook"><img src="http://studiowestithaca.com/images/facebook.png" width="28" height="28" alt="Studio West on Facebook" /></a>
+                      </td>
+                      <td width="10">&nbsp;</td>
+                      <td>
+                        <font style="font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size: 11px;line-height:18px;color:#FFFFFF;">
+                          Studio West is a project of <a target="_blank" href="http://thinktopography.com" style="color:#FFB001"">Think Topography</a>,<br />a communications and information design company<br /></a>
+                        </font>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

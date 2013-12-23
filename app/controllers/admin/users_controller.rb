@@ -16,7 +16,17 @@ class Admin::UsersController < Admin::ApplicationController
     sign_in(@user, :bypass => true) if @user.id == current_user.id
     Notifications.welcome(@user).deliver
     render :text => 'sent'
-    #render "notifications/welcome", :layout => false
+  end
+  
+  def renew
+    @user = User.find 1
+    Notifications.renew(@user).deliver
+    output = ""
+     @users = User.joins('INNER JOIN codes ON codes.id=users.code_id')
+     @users.each do |user|
+       output += "#{user.full_name}<br />"
+     end
+    render :text => output
   end
   
   def openhouse
