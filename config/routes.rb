@@ -34,7 +34,7 @@ Studiowest::Application.routes.draw do
     resources :inquiries, :controller => 'inquiries'
     resources :users, :controller => 'users' do
       get :welcome, :on => :member
-      get :renew, :on => :collection
+      get :newyear, :on => :collection
       get :openhouse, :on => :collection
       post :openhouse, :on => :collection
     end

@@ -18,14 +18,16 @@ class Admin::UsersController < Admin::ApplicationController
     render :text => 'sent'
   end
   
-  def renew
-    output = ""
-     @users = User.joins('INNER JOIN codes ON codes.id=users.code_id')
-     @users.each do |user|
-       Notifications.renew(user).deliver
-       output += "#{user.full_name}<br />"
-     end
-    render :text => output
+  def newyear
+    # output = ""
+     # @users = User.joins('INNER JOIN codes ON codes.id=users.code_id')
+     # @users.each do |user|
+       # Notifications.renew(user).deliver
+       # output += "#{user.full_name}<br />"
+    # end
+    # render :text => output
+    @user = User.find 2
+    render :template => "notifications/newyear", :layout => 'email'
   end
   
   def openhouse
