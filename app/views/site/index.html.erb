@@ -33,82 +33,32 @@
   <div class="inner">
   	<div class="left">
   		<div class="table">
-        <h2>Coworking Plans</h2>
+        <h2>Membership Rates</h2>
 	      <table cellpadding="0" cellspacing="0">
-	        <thead>
-	          <tr>
-	            <td>&nbsp;</td>
-	            <td><%= image_tag "quartertime.png", :size => '30x30' %><br /><strong>1/4 Time</strong></td>
-	            <td><%= image_tag "halftime.png", :size => '30x30' %><br /><strong>1/2 Time</strong></td>
-	            <td><%= image_tag "threequarterstime.png", :size => '30x30' %><br /><strong>3/4 Time</strong></td>
-	            <td><%= image_tag "fulltime.png", :size => '30x30' %><br /><strong>Full Time</strong></td>
-	          </tr>
-	        </thead>
 	        <tbody>
 	          <tr class="odd">
-	            <th>Monthly Price</th>
-	            <td><strong>$150</strong></td>
-	            <td><strong>$210</strong></td>
-	            <td><strong>$270</strong></td>
-	            <td><strong>$330</strong></td>
+	            <th>Monthly Rate</th>
+	            <td><strong>$175 / month</strong></td>
 	          </tr>
 	          <tr class="even">
-	            <th>Coworking Credits</th>
-	            <td>40</td>
-	            <td>80</td>
-	            <td>120</td>
-	            <td>160</td>
+              <th>Quarterly Rate (3 months)</th>
+              <td><strong>$500 / quarter</strong></td>
 	          </tr>
 	          <tr class="odd">
-	            <th>Average Hours/Week</th>
-	            <td>10</td>
-	            <td>20</td>
-	            <td>30</td>
-	            <td>40</td>
+              <th>Day Rate</th>
+              <td><strong>$10 / day</strong></td>
 	          </tr>
-	          <tr class="even">
-	            <th>10% Off SEEN Membership <span class="footnote">*</span></th>
-	            <td class="yes">YES</td>
-	            <td class="yes">YES</td>
-	            <td class="yes">YES</td>
-	            <td class="yes">YES</td>
-	          </tr>
-	          <tr class="odd">
-	            <th>Event Rental</th>
-	            <td class="no">NO</td>
-	            <td class="yes">YES</td>
-	            <td class="yes">YES</td>
-	            <td class="yes">YES</td>
-	          </tr>
-	          <tr class="even">
-	            <th>Signage</th>
-	            <td class="no">NO</td>
-	            <td class="no">NO</td>
-	            <td class="yes">YES</td>
-	            <td class="yes">YES</td>
-	          </tr>
-	          <tr class="odd">
-	            <th>Mailing Address</th>
-	            <td class="no">NO</td>
-	            <td class="no">NO</td>
-	            <td class="no">NO</td>
-	            <td class="yes">YES</td>
-	          </tr>
+            <tr class="odd">
+              <th>Evening Event Rate</th>
+              <td><strong>$40 / hour</strong></td>
+            </tr>
 	        </tbody>
-					<tfoot>
-						<tr>
-							<td colspan="5">
-								<span class="footnote">*</span> Learn more at <%= link_to 'theseen.org', 'http://theseen.org', :target => "_blank" %><br />
-                <span class="footnote">**</span> <%= link_to 'Discounts available for multiple month payment', pricing_memberships_url %>
-						  </td>
-						</tr>
-					</tfoot>
 	      </table>
   		</div>
   	</div>
 		<div class="right">
-			<h2>Flexible Plans</h2>
-			<p>In order to accommodate our members' various needs and working preferences, we offer four distinct coworking plans. These plans are designed around quarter time, half time, three quarters time, and full time usage.  At each level, members receive a set number of coworking credits that can be applied towards reservations as well as other standard benefits. Members who purchase larger blocks of credits are also entitled to additional benefits such as use of our mailing address or window signage.</p>
+			<h2>Simple Membership Model</h2>
+			<p>The business model is simple - we offer month to month memberships with <strong>no long term contract</strong>. Simply sign up with your credit card and use the studio whenever you want! The space is available 24 hours a day, 7 days a week and we'll give you your own keycode to get in. Start your membership on any day of the month and cancel whenever you want - just give us 5 days notice!</p>
 		</div>
   </div>
 </div>
@@ -116,39 +66,11 @@
 <div class="third" id="credits">
   <div class="inner">
   	<div class="left">
-      <h2>Credit System</h2>
-			<p>Coworking credits can be used to reserve one of 10 desks, a private office, or the conference room. Members are encouraged to use their credits in the manner that work best for them - all in one week or distributed evenly throughout the month. Resources are available seven days a week from 7 a.m. to 11 p.m. and are offered on a first come, first served basis. As most coworking takes place during normal business hours, all resources are offered at half price during evening and weekend "off peak" hours.</p>
+      <h2>Reservable Resources</h2>
+      <p>We offer a range of options to accomodate our member's various needs and work styles, including tables, stand up desks, couches, a private office, and a full conference room. Desks and couches are available to members on demand and the private office and conference room can be reserved on an as-needed basis using our shared Google Calendar. The private office and conference room are provided for collaborative work, client meetings, and presentations.</p>
   	</div>
 		<div class="right">
-			<div class="table">
-				<h2>Credits / Hour</h2>
-	      <table cellpadding="0" cellspacing="0">
-	        <thead>
-	          <tr>
-	            <td>&nbsp;</td>
-	            <td><strong>Peak Hours</strong><br />M-F, 7AM-6PM</td>
-	            <td><strong>Off-Peak Hours</strong><br />M-F, 6PM-11PM<br />WEEKENDS</td>
-	          </tr>
-	        </thead>
-	        <tbody>
-	          <tr class="odd">
-	            <th>Desk</th>
-	            <td>1.0</td>
-	            <td>0.5</td>
-	          </tr>
-	          <tr class="even">
-	            <th>Private Office</th>
-	            <td>2.0</td>
-	            <td>1.0</td>
-	          </tr>
-	          <tr class="odd">
-	            <th>Conference Room</th>
-	            <td>3.0</td>
-	            <td>1.5</td>
-	          </tr>
-	        </tbody>
-	      </table>
-			</div>
+      <%= image_tag "schedule.png", :width => "440" %>
 		</div>
   </div>
 </div>
@@ -156,11 +78,13 @@
 <div class="fourth" id="scheduling">
   <div class="inner">
     <div class="left">
-    	<%= image_tag "application.png", :size => "460x250" %>
+      <div class="frame">
+        <%= image_tag "party.jpg", :size => "440x250" %>
+      </div>
     </div>
     <div class="right">
-      <h2>Online Scheduling</h2>
-      <p>Reservations are managed through an intuitive web-based scheduling tool. Members can log in at any time and use their available coworking credits to reserve the resources they need when they need them. With a signed commitment letter, members are given the additional flexibility to schedule resources several weeks to several months ahead of time.</p>
+      <h2>Events / Workshops</h2>
+      <p>During the hours between 6PM - 12PM every day, we maintain a "grey zone" for coworking usage, meaning that the studio is available for evening rentals. If you are interested in hosting an event at the space, we offer a competative rate of <strong>$40/hr</strong> to reserving the entire studio for your workshop, event, or party. Events must be scheduled at least two weeks in advance and if there's no event planned, the space is still available to members for coworking.</p>
     </div>
   </div>
 </div>
@@ -174,7 +98,7 @@
 			<%= link_to "Felicia's Atomic Lounge", "http://www.atomicloungeithaca.com", :target => '_blank' %>, 
       <%= link_to 'Saigon Kitchen', "http://www.saigonkitchenithaca.com", :target => '_blank' %>, and
       <%= link_to 'The Westy', "https://www.facebook.com/profile.php?id=1663563167", :target => '_blank' %>.
-			The studio is located less than a block away from the nearest <%= link_to 'Ithaca Carshare', "http://www.ithacacarshare.org", :target => '_blank' %> vehicle and just a short walk to The Commons.
+      Start your day with a cup of coffee and end it with a cocktail with coworkers. The studio is located less than a block away from the nearest <%= link_to 'Ithaca Carshare', "http://www.ithacacarshare.org", :target => '_blank' %> vehicle and just a short walk to The Commons.
   	</div>
     <div class="right">
       <div class="frame">
@@ -204,7 +128,7 @@
       <div class="form">
         <% form_for @inquiry, { :url => home_path(:anchor => 'signup') } do |f| %>
           <div class="header">
-            <h2>Let's Get Started!</h2>
+            <h2>Apply Now</h2>
             <p>Ready to cowork? Complete the form below and we'll contact you with membership availability and schedule a time for you to visit the studio and meet us!</p>
           </div>
           <div class="body">

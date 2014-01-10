@@ -39,16 +39,16 @@ div.navbar div.presence ul a { display: block; padding: 5px; color: #fff; width:
 div.navbar div.presence ul a:hover { background-color: #EEE; color: #333; }
 
 div.table { border: 10px solid #FFF; -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); margin: 0 10px; background-color: #FFF; }
-div.table h2 { background-color: #000; color: #FFF; font-size: 12px; padding: 3px; text-align: center; margin: 0 0 10px; }
+div.table h2 { background-color: #000; color: #FFF; font-size: 14px; padding: 10px; text-align: center; margin: 0 !important; }
 div.table span.footnote { color: #F00; font-weight: bold; }
 div.table table { border-collapse: collapse; width: 440px; }
-div.table table thead th, div.table table thead td { padding: 5px 3px; border-top: 1x solid #FFF; border-right: 1x solid #FFF; }
+div.table table thead th, div.table table thead td { padding: 5px 3px; border-top: 1px solid #FFF; border-right: 1px solid #FFF; }
 div.table table thead td { background-color: #FFF; text-align: center; vertical-align: bottom; color: #666; border-bottom: 1px solid #AAA; }
 div.table table thead td strong { color: #000; }
-div.table table tbody td, div.table table tbody th { border-right: 1px solid #AAA; border-bottom: 1px solid #AAA; font-size: 11px; }
-div.table table tbody th, div.table table tbody td { padding: 3px; }
+div.table table tbody td, div.table table tbody th { border-right: 1px solid #AAA; border-bottom: 1px solid #AAA; font-size: 13px; }
+div.table table tbody th, div.table table tbody td { padding: 10px; }
 div.table table tbody th { border-left: 1px solid #AAA; text-align: left; }
-div.table table tbody td { text-align: center; color: #666; }
+div.table table tbody td { color: #666; }
 div.table table tbody tr.odd td, div.table table tbody tr.odd th { background-color: #EEE; }
 div.table table tbody tr.even td, div.table table tbody tr.even th { background-color: #FFF; }
 div.table table tbody td.no { color: #900; }
@@ -64,7 +64,7 @@ div.inner div.left { float: left; width: 480px; }
 div.inner div.right { float: right; width: 480px; }
 div.inner div.center { margin: 0 auto; width: 480px; }
 div.inner h2 { margin: 0 10px 10px; color: #FFF; }
-div.inner p { margin: 0 10px; color: #EEE; font-size: 14px; line-height: 30px; }
+div.inner p { margin: 0 10px; color: #EEE; font-size: 14px; line-height: 26px; }
 
 div.form { -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); margin: 0 10px; background-color: #FFF; }
 div.form div.header { background-color: #000; padding: 10px; }
@@ -103,14 +103,16 @@ div.first div.left h3.intro { color: #FFF; font-size: 14px; line-height: 28px; m
 div.first div.right div.frame { width: 200px; margin: 0 10px 20px; float: left; }
 
 div.second { background-color: #333; }
-div.second tbody th { width: 44%; }
-div.second tbody td { width: 14%; }
+div.second tbody th { width: 70%; }
+div.second tbody td { width: 30%; text-align: center; }
 
 div.third { background-color: #D94316; }
 div.third tbody th { width: 30%; }
 div.third tbody td { width: 20%; }
 
 div.fourth { background-color: #333; }
+div.fourth div.frame { width: 440px; }
+div.fourth img { margin: 0; }
 
 div.fifth { background-color: #D94316; }
 div.fifth a { font-weight: bold; color: #FFF; }
@@ -128,7 +130,7 @@ div#signup thead td { border-top: 1px solid #AAA; border-right: 1px solid #AAA; 
 div#signup tfoot th { border: 1px solid #AAA; background: #BBB; }
 div#signup tfoot td { border-bottom: 1px solid #AAA; border-right: 1px solid #AAA; }
 
-div#map { display: block; width: 440px; height: 280px; background-color: #333; }
+div#map { display: block; width: 440px; height: 250px; background-color: #333; }
 
 div.thankyou { background-color: #ffb001; }
 div.thankyou div.inner { padding: 90px 0 50px; }

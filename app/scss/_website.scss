@@ -5,7 +5,7 @@ div.inner {
   div.right { float: right; width: 480px; }
   div.center { margin: 0 auto; width: 480px; }
   h2 { margin: 0 10px 10px; color: #FFF; }
-  p { margin: 0 10px; color: #EEE; font-size: 14px; line-height: 30px; }
+  p { margin: 0 10px; color: #EEE; font-size: 14px; line-height: 26px; }
 }
 
 div.form {
@@ -68,8 +68,8 @@ div.first {
 div.second {
   background-color: #333;
   tbody {
-    th { width: 44%; }
-    td { width: 14%; }
+    th { width: 70%; }
+    td { width: 30%; text-align: center; }
   }
 
 }
@@ -82,6 +82,8 @@ div.third {
 }
 div.fourth {
   background-color: #333;
+  div.frame { width: 440px; }
+  img { margin: 0; }
 }
 div.fifth {
   background-color: #D94316;
@@ -106,7 +108,7 @@ div#signup {
     td { border-bottom: 1px solid #AAA; border-right: 1px solid #AAA; }
   }
 }
-div#map { display: block; width: 440px; height: 280px; background-color: #333; }
+div#map { display: block; width: 440px; height: 250px; background-color: #333; }
 div.thankyou {
   background-color: #ffb001;
   div.inner { padding: 90px 0 50px; }

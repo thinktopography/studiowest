@@ -17,6 +17,14 @@ class Notifications < ActionMailer::Base
     bcc = "Greg Kops <greg@thinktopography.com>"
     mail(:from => from, :to => to, :bcc => bcc, :subject => 'Happy Holidays and Membership Update')
   end
+    
+  def newyear(user)
+    @user = user
+    from = "Studio West <notifications@studiowestithaca.com>"
+    to = @user.email
+    bcc = "Greg Kops <greg@thinktopography.com>"
+    mail(:from => from, :to => to, :bcc => bcc, :subject => "It's Our Two Year Anniversary")
+  end
 
   def openhouse(first,last,email)
     @first_name = first
